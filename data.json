@@ -7,6 +7,7 @@
                 "ap": 0,
                 "xp": 0,
                 "health": 10,
+                "isRobot": false,
                 "isNPC": false,
                 "origin": null,
                 "traits": null,
@@ -114,6 +115,7 @@
                 "ap": 0,
                 "xp": 0,
                 "health": 12,
+                "isRobot": false,
                 "isNPC": false,
                 "origin": "Vault Dweller",
                 "traits": ["Vault Kid"],
@@ -727,70 +729,125 @@
                         "LCK": 9
                     }]
                 }],
-                "description": ""
+                "description": "When you inflict one or more
+                points of damage to an enemy,
+                you may spend 1 Luck Point to
+                automatically inflict a critical
+                hit, causing an injury."
             },
             {
-                "name": "",
-                "ranks": ,
+                "name": "Big Leagues",
+                "ranks": 1,
                 "requirements": [{
-                    "levels": ,
-                    "attributes": 
+                    "levels": null,
+                    "attributes": [{
+                        "STR": 8
+                    }]
                 }],
-                "description": ""
+                "description": "When you make a melee
+                attack with a two-handed
+                melee weapon, the
+                weapon gains the Vicious
+                damage effect."
             },
             {
-                "name": "",
-                "ranks": ,
+                "name": "Black Widow/Lady Killer",
+                "ranks": 1,
                 "requirements": [{
-                    "levels": ,
-                    "attributes": 
+                    "levels": null,
+                    "attributes": [{
+                        "CHA": 6
+                    }]
                 }],
-                "description": ""
+                "description": "The Black Widow perk affects
+                men and masculine characters,
+                while the Lady Killer perk
+                affects women and feminine
+                characters—they are otherwise
+                identical. When you attempt a
+                CHA based skill test to influence
+                a character of the chosen gender, you may re-roll
+                1d20. In addition, your attacks inflict +1CD additional
+                damage against characters of the chosen gender."
             },
             {
-                "name": "",
-                "ranks": ,
+                "name": "Blacksmith",
+                "ranks": 3,
                 "requirements": [{
-                    "levels": ,
-                    "attributes": 
+                    "levels": [2, 6, 10],
+                    "attributes": [{
+                        "STR": 6
+                    }]
                 }],
-                "description": ""
+                "description": "You can modify
+                melee weapons
+                with weapon mods.
+                Each rank in this
+                perk unlocks an
+                additional rank
+                of melee weapon
+                mods: rank 1
+                unlocks rank 1 mods, rank 2 unlocks rank 2 mods, and
+                rank 3 unlocks rank 3 mods. Each time you take this
+                perk, the level requirement increases by 4."
             },
             {
-                "name": "",
-                "ranks": ,
+                "name": "Blitz",
+                "ranks": 2,
                 "requirements": [{
-                    "levels": ,
-                    "attributes": 
+                    "levels": [1, 4],
+                    "attributes": [{
+                        "AGI": 9
+                    }]
                 }],
-                "description": ""
+                "description": "When you move into reach of an opponent and make
+                a melee attack against them in one turn, you may
+                re-roll one d20 on your attack.
+                At rank 2, you also inflict +1CD damage with that
+                attack. Each time you take this perk, the level requirement
+                increases by 3."
             },
             {
-                "name": "",
-                "ranks": ,
+                "name": "Bloody Mess",
+                "ranks": 1,
                 "requirements": [{
-                    "levels": ,
-                    "attributes": 
+                    "levels": null,
+                    "attributes": [{
+                        "LCK": 6
+                    }]
                 }],
-                "description": ""
+                "description": "When you inflict a critical hit,
+                roll 1CD; if you roll an Effect, you
+                inflict one additional injury to a
+                random location."
             },
             {
-                "name": "",
-                "ranks": ,
+                "name": "Can Do!",
+                "ranks": 1,
                 "requirements": [{
-                    "levels": ,
-                    "attributes": 
+                    "levels": null,
+                    "attributes": [{
+                        "LCK": 5
+                    }]
                 }],
-                "description": ""
+                "description": "When you are scavenging
+                a location that contains
+                food, you gain 1 additional
+                random food item, without
+                spending AP."
             },
             {
-                "name": "",
-                "ranks": ,
+                "name": "Cap Collector",
+                "ranks": 1,
                 "requirements": [{
-                    "levels": ,
-                    "attributes": 
+                    "levels": null,
+                    "attributes": [{
+                        "CHA": 5
+                    }]
                 }],
-                "description": ""
+                "description": "When you buy or sell items, you
+                may increase or decrease the price
+                of the goods being traded by 10%."
             },
             {
                 "name": "",
