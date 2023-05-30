@@ -1,0 +1,934 @@
+[
+    {
+        "characters": [
+            {
+                "name": null,
+                "level": 1,
+                "ap": 0,
+                "xp": 0,
+                "health": 10,
+                "isNPC": false,
+                "origin": null,
+                "traits": null,
+                "equipmentPack": null,
+                "attributes": [{
+                    "STR": 5,
+                    "PER": 5,
+                    "END": 5,
+                    "CHA": 5,
+                    "INT": 5,
+                    "AGI": 5,
+                    "LCK": 5
+                }],
+                "skills": [{
+                    "Athletics": [{"attribute": "STR", "rank": 0, "isTag": false}],
+                    "Barter": [{"attribute": "CHA", "rank": 0, "isTag": false}],
+                    "Big Guns": [{"attribute": "END", "rank": 0, "isTag": false}],
+                    "EnergyWeapons": [{"attribute": "PER", "rank": 0, "isTag": false}],
+                    "Explosives": [{"attribute": "PER", "rank": 0, "isTag": false}],
+                    "Lockpick": [{"attribute": "PER", "rank": 0, "isTag": false}],
+                    "Medicine": [{"attribute": "INT", "rank": 0, "isTag": false}],
+                    "MeleeWeapons": [{"attribute": "STR", "rank": 0, "isTag": false}],
+                    "Pilot": [{"attribute": "PER", "rank": 0, "isTag": false}],
+                    "Repair": [{"attribute": "INT", "rank": 0, "isTag": false}],
+                    "Science": [{"attribute": "INT", "rank": 0, "isTag": false}],
+                    "SmallGuns": [{"attribute": "AGI", "rank": 0, "isTag": false}],
+                    "Sneak": [{"attribute": "AGI", "rank": 0, "isTag": false}],
+                    "Speech": [{"attribute": "CHA", "rank": 0, "isTag": false}],
+                    "Surivival": [{"attribute": "END", "rank": 0, "isTag": false}],
+                    "Throwing": [{"attribute": "AGI", "rank": 0, "isTag": false}],
+                    "Unarmed": [{"attribute": "STR", "rank": 0, "isTag": false}]
+                }],
+                "perks": [{
+                    
+                }],
+                "stats": [{
+                    "carryWeight": 200,
+                    "damageResist": [{
+                        "physical": 0,
+                        "energy": 0,
+                        "radiation": 0,
+                        "poison": 0
+                    }],
+                    "defense": 1,
+                    "initiative": 10,
+                    "maxHealth": 10,
+                    "meleeBonus": 0
+                }],
+                "inventory": [{
+                    "currency": [{
+                        "caps": 0,
+                        "pre-war": 0,
+                        "gold": 0,
+                        "newMoney": 0,
+                        "scrip": 0
+                    }],
+                    "gear": [{
+                        "ammo": [{
+
+                        }],
+                        "armor": [{
+
+                        }],
+                        "clothing": [{
+
+                        }],
+                        "foodAndDrink": [{
+
+                        }],
+                        "chems": [{
+
+                        }],
+                        "otherConsumables": [{
+
+                        }],
+                        "weapons": [{
+
+                        }],
+                        "booksAndMags": [{
+
+                        }],
+                        "other": [{
+
+                        }]
+                    }],
+                    "mods": [{
+                        "armor": [{
+
+                        }],
+                        "clothing": [{
+
+                        }],
+                        "weapon": [{
+
+                        }],
+                        "robot": [{
+
+                        }]
+                    }]
+                }]
+            },
+            {
+                "name": "John Smith",
+                "level": 1,
+                "ap": 0,
+                "xp": 0,
+                "health": 12,
+                "isNPC": false,
+                "origin": "Vault Dweller",
+                "traits": ["Vault Kid"],
+                "equipmentPack": "Vault-Tec Resident",
+                "attributes": [{
+                    "STR": 5,
+                    "PER": 5,
+                    "END": 5,
+                    "CHA": 5,
+                    "INT": 6,
+                    "AGI": 7,
+                    "LCK": 7
+                }],
+                "skills": [{
+                    "Athletics": [{"attribute": "STR", "rank": 2, "isTag": false}],
+                    "Barter": [{"attribute": "CHA", "rank": 1, "isTag": false}],
+                    "Big Guns": [{"attribute": "END", "rank": 0, "isTag": false}],
+                    "EnergyWeapons": [{"attribute": "PER", "rank": 0, "isTag": false}],
+                    "Explosives": [{"attribute": "PER", "rank": 0, "isTag": false}],
+                    "Lockpick": [{"attribute": "PER", "rank": 3, "isTag": true}],
+                    "Medicine": [{"attribute": "INT", "rank": 1, "isTag": false}],
+                    "MeleeWeapons": [{"attribute": "STR", "rank": 1, "isTag": false}],
+                    "Pilot": [{"attribute": "PER", "rank": 2, "isTag": false}],
+                    "Repair": [{"attribute": "INT", "rank": 2, "isTag": false}],
+                    "Science": [{"attribute": "INT", "rank": 1, "isTag": false}],
+                    "SmallGuns": [{"attribute": "AGI", "rank": 3, "isTag": true}],
+                    "Sneak": [{"attribute": "AGI", "rank": 3, "isTag": true}],
+                    "Speech": [{"attribute": "CHA", "rank": 1, "isTag": false}],
+                    "Surivival": [{"attribute": "END", "rank": 3, "isTag": true}],
+                    "Throwing": [{"attribute": "AGI", "rank": 0, "isTag": false}],
+                    "Unarmed": [{"attribute": "STR", "rank": 0, "isTag": false}]
+                }],
+                "perks": [{
+                    "Dogmeat": 1
+                }],
+                "stats": [{
+                    "carryWeight": 200,
+                    "damageResist": [{
+                        "physical": 0,
+                        "energy": 0,
+                        "radiation": 0,
+                        "poison": 0
+                    }],
+                    "defense": 1,
+                    "initiative": 12,
+                    "maxHealth": 12,
+                    "meleeBonus": 0
+                }],
+                "inventory": [{
+                    "currency": [{
+                        "caps": 10,
+                        "pre-war": 0,
+                        "gold": 0,
+                        "newMoney": 0,
+                        "scrip": 0
+                    }],
+                    "gear": [{
+                        "ammo": [{
+                            "10mm": [{
+                                "quantity": 9,
+                                "weight": 0,
+                                "cost": 2,
+                                "rarity": 0
+                            }]
+                        }],
+                        "armor": [{
+
+                        }],
+                        "clothing": [{
+
+                        }],
+                        "foodAndDrink": [{
+
+                        }],
+                        "chems": [{
+
+                        }],
+                        "otherConsumables": [{
+
+                        }],
+                        "weapons": [{
+
+                        }],
+                        "booksAndMags": [{
+
+                        }],
+                        "other": [{
+
+                        }]
+                    }],
+                    "mods": [{
+                        "armor": [{
+
+                        }],
+                        "clothing": [{
+
+                        }],
+                        "weapon": [{
+
+                        }],
+                        "robot": [{
+
+                        }]
+                    }]
+                }]
+            }
+        ]
+    },
+    {
+        "origins": [
+            {
+                "name": "Brotherhood Initiate",
+                "description": "Born from the terrible revelations of the Mariposa
+                Rebellion, Roger Maxson formed the Brotherhood of
+                Steel so that his people—and eventually the rest of the
+                survivors in this new world—would have something
+                to believe in. With its own mythology, creed, and
+                hierarchy, the Brotherhood of Steel’s primary goal is
+                the recovery and preservation of the technology of the
+                pre-war world. With the Great War disrupting humanity’s
+                access to technology, the Brotherhood’s knights
+                and scribes do all they can to secure the technology of
+                the past, for the needs of future generations.
+                You may be a descendant of a knight or paladin, born
+                into the Brotherhood and a firm believer of their doctrine,
+                or you may be a new recruit, pledging yourself
+                to their cause and looking to rise through their ranks.
+                Although the Brotherhood share a common goal,
+                their chapters across the wasteland can have different
+                beliefs and protocols, and they aren’t as unified
+                as they seem from the outside. While the West Coast
+                Brotherhood of Steel warred with the New California
+                Republic over reclamation of technology and the
+                NCR’s expansion efforts, the East Coast chapter was
+                effectively isolated when it prioritized charity over
+                the exchange of technology and the preservation of
+                pre-war equipment. Elder Lyons’ mission became
+                humanitarian, and while that earned them isolation at
+                first, Arthur Maxson led their expansion of influence
+                from Washington D.C. to the entire Eastern Seaboard,
+                refocusing their efforts on technological recovery and
+                development.",
+                "trait": [{
+                    "name": "The Chain that Binds",
+                    "description": "You gain one additional Tag skill, which must be one of
+                    Energy Weapons, Science, or Repair.
+                    As a member of the Brotherhood of Steel, you are bound by
+                    the chain of command: The Chain that Binds. You must carry
+                    out the orders of your immediate superiors, and you are
+                    responsible for your subordinate siblings. If you do not carry
+                    out your duty, you are expelled from the Brotherhood and
+                    your technology will be reclaimed—by any means necessary."
+                }]
+            },
+            {
+                "name": "Ghoul",
+                "description": "Prolonged exposure to the effects of background
+                gamma radiation—part of the fallout of the Great
+                War—can spontaneously mutate humans. You are
+                one of those mutants. Either slowly, or strangely
+                spontaneously, your body changed into that of a rotting,
+                living corpse. You no longer age the same way,
+                and appear unaffected by radiation. Your skin peels
+                from your flesh but seems to be sustained by your
+                mutated metabolism.
+                You are a “ghoul”—a necrotic post-human—one of
+                many rag-tag survivors who weren’t lucky enough to
+                get into a Vault-Tec facility. You may have been born
+                after the war, and over time developed the necrotic
+                mutation. You may have come from Vault 12 in
+                Bakersfield, California, whose vault door did not close,
+                exposing the population to the radiation from outside.
+                You may have taken refuge in a ghoul settlement, like
+                Underworld in the Capital Wasteland, and have ventured
+                out recently to explore, scavenge, and survive.
+                Civilized ghouls, such as yourself, also fear a possible
+                degeneration into a frenzied, feral nature. Feral
+                ghouls are necrotic mutants like yourself who have
+                lost higher brain functions, and reverted to a primal,
+                violent state. They attack non-ghouls indiscriminately
+                to defend their territory or feed. Whether this loss of
+                reason is due to acute levels of radiation or the inevitable
+                outcome of the mutation, you’re not sure, and
+                that makes it all the more terrifying.",
+                "trait": [{
+                    "name": "Necrotic Post-Human",
+                    "description": "You are immune to radiation damage. In fact, you’re healed
+                    by it—you regain 1 HP for every 3 points of radiation
+                    damage inflicted upon you, and if you rest in an irradiated
+                    location, you may re-roll your dice pool when checking if
+                    your injuries heal. In addition, Survival becomes a Tag skill,
+                    increasing it by 2 ranks.
+                    You age at a much-decreased rate, and you’re probably
+                    older than your unmutated companions—you may even have
+                    survived the Great War of 2077—but you’re sterile: “the first
+                    generation of ghouls is the last” as the saying goes. You may
+                    face discrimination from “smoothskins” (humans who aren’t
+                    ghouls), increasing the difficulty or complication range of
+                    Charisma tests depending on your opponent’s beliefs."
+                }]
+            },
+            {
+                "name": "Super Mutant",
+                "description": "You are a brutal, mutated human, forced to evolve
+                from thoughtless experiments by the twisted science
+                of the pre- and post-war world. Infected with
+                the Forced Evolutionary Virus (F.E.V.), your body has
+                mutated into a tall, muscular killing machine, filled
+                with a rage.
+                You could have originated from the Master’s army
+                at the Mariposa military base, California, created
+                as he experimented on unwilling human victims,
+                splitting into one of the factions upon his death to
+                attack or rebuild the wasteland with its survivors.
+                Your origins could be rooted in the Evolutionary
+                Experimentation Program of Vault 87, whose super
+                mutant groups terrorize the Capital Wasteland. You
+                could have been abducted from the Commonwealth
+                and exposed to the F.E.V. by the Institute and disposed
+                of back into the wasteland to fend for yourself
+                in small bands of raiders. Or finally, you could have
+                been a resident of Huntersville, Appalachia, whose
+                water supply was contaminated with the virus and
+                the mutations went unchecked.
+                Although these super mutants share the same qualities,
+                the groups formed from the three strains haven’t
+                mixed, and there is little evidence they have met one
+                another. While some groups have migrated or moved
+                in their lifetime, none have travelled far enough to
+                encounter one another, so where your quests take
+                place will likely dictate your origin.",
+                "trait": [{
+                    "name": "Forced Evolution",
+                    "description": "Your initial Strength and Endurance attributes are increased
+                    by +2 each, and your maximum Strength and Endurance
+                    are increased to 12, but your maximum Intelligence and
+                    Charisma are both reduced to 6. You may not have more
+                    than 4 ranks in any skill. You are completely immune to
+                    radiation and poison damage.
+                    You stand over seven feet tall, and your body is bulky and
+                    muscular. Your skin is green, yellow, or grey, regardless of
+                    what color it was when you were human. You do not seem to
+                    age, but you are sterile.
+                    You can only wear armor
+                    which has been made to
+                    fit a super mutant."
+                }]
+            },
+            {
+                "name": "Mister Handy",
+                "description": "The General Atomics International robot “Mister
+                Handy” exploded onto the robotic market as a
+                reliable construction robot, known for its durability
+                and ease of maintenance, but its real breakthrough
+                came in a collaboration with RobCo to produce a
+                domestic model.
+                You are one of these domestic automatons, produced
+                some time between 2037 and 2077, seeking to provide
+                every household in America with butler-like servitude.
+                Equipped with state-of-the-art programming, you have
+                initiative and can adapt your own coding to learn more
+                from your environment. This capacity for self-determination
+                is what has enabled your survival beyond the
+                Great War; where other robots may have broken down,
+                you have managed to shake loose from the shackles of
+                your programming and find a life for yourself.
+                Many models exist, and you could come from any
+                of the Mister Handy, Mister Gutsy, Miss Nanny, or
+                Mister Orderly series. You are powered by a nuclear
+                core, can replace your own fuel, and repair yourself
+                or other Mister Handy units. Your model has three
+                mechanical arms and three mechanical eyes on stalks,
+                and your jet propulsion keeps you hovering above the
+                ground, providing you have all the fuel you need. With
+                this rugged design, you have survived so far.",
+                "trait": [{
+                    "name": "Mister Handy Robot",
+                    "description": "You have 360° vision and improved sensory systems that
+                    can detect smells, chemicals, and radiation, reducing the
+                    difficulty of Perception tests that rely on sight and smell by
+                    1. You are also immune to radiation and poison damage,
+                    but you cannot use chems, nor can you benefit from food,
+                    drink, or rest. You move by jet propulsion, hovering above
+                    the ground, unaffected by difficult terrain or obstacles. Your
+                    carry weight is 150 lbs., and it cannot be increased by
+                    your Strength or perks, but it can be increased by modified
+                    armor. You cannot recover from your own injuries or
+                    heal health points without receiving repairs (see Healing
+                    Robots, p.34).
+                    You cannot manipulate the physical
+                    world like humans do, instead you have
+                    three of the arm attachments in the Arm
+                    Attachments table, determined by your
+                    choice of equipment pack. If you select an arm
+                    that features a weapon, you also gain 20 shots of
+                    ammo for that weapon."
+                }],
+                "arms": [
+                    {
+                        "name": "10mm Auto Pistol",
+                        "effect": "You can make ranged attacks using a 10mm auto pistol (see 10mm pistol, with an
+                        automatic receiver mod, p.95)."
+                    },
+                    {
+                        "name": "Buzz-Saw",
+                        "effect": "You can cut objects and make melee attacks with a circular saw. The buzz-saw inflicts 3CD
+                        Piercing 1 physical damage."
+                    },
+                    {
+                        "name": "Flamer",
+                        "effect": "You can set objects alight, cook food, or make ranged attacks with a short-range
+                        flamethrower (see flamer, p.106)."
+                    },
+                    {
+                        "name": "Laser Emitter",
+                        "effect": "You can cut objects or make ranged attacks using a laser (see laser gun, p.101)."
+                    },
+                    {
+                        "name": "Pincer",
+                        "effect": "You can pick up objects with an individual pincer that weighes no more than 40 lbs.
+                        and manipulate objects in your environment. You may also make unarmed attacks (2CD 
+                        physical damage) with the pincer."
+                    }
+                ]
+            },
+            {
+                "name": "Survivor",
+                "description": "You are the living legacy of the people who prepared
+                for Armageddon on their own. You are only alive in
+                the post-nuclear apocalyptic landscape because your
+                forebears dug in, survived, and found community
+                enough to continue humanity’s existence.
+                You could be from any number of settlements, isolated
+                shelters, or traveling groups that sparsely populate the
+                wasteland from West Coast to East Coast. You could
+                be from the New California Republic, carrying on the
+                legacy of Vault 15 and Shady Sands. You could fight
+                to protect others, calling a group of survivors like the
+                Minutemen or the Regulators your home. You could
+                also be a merciless raider or be born into one of these
+                groups but escaped in order to rehabilitate and reform.
+                Wherever you are from, or wherever you travel, making
+                connections and laying down roots can be hard.
+                Survivors are naturally wary of others, and are always
+                on the lookout for the next conman, raiding party,
+                or thief that will take their hard-earned resources.
+                Travelling vast distances is difficult too, and many travelling
+                survivors—particularly trading caravans—move
+                between large settlements within their area of the
+                wasteland, rather than travelling from coast to coast.",
+                "traits": [
+                    {
+                        "name": "Educated",
+                        "benefit": "You have one additional tag skill.",
+                        "penalty": "When you fail a skill test using a skill other
+                        than a tag skill, the GM gains 1 AP."
+                    },
+                    {
+                        "name": "Fast Shot",
+                        "benefit": "If you take a second major action in combat, and
+                        use it to make a ranged attack, the additional
+                        major action only costs 1 AP, rather than 2.",
+                        "penalty": "You cannot benefit from the Aim minor
+                        action—you’re too impatient."
+                    },
+                    {
+                        "name": "Gifted",
+                        "benefit": "Choose two S.P.E.C.I.A.L. attributes and
+                        increase them by +1 each.",
+                        "penalty": "Your maximum number of Luck points is one
+                        fewer than your Luck attribute."
+                    },
+                    {
+                        "name": "Heavy Handed",
+                        "benefit": "Your Melee Damage bonus increases by +1CD.",
+                        "penalty": "Your melee and unarmed attacks suffer a
+                        complication on a 19 or 20, rather than
+                        only a 20."
+                    },
+                    {
+                        "name": "Small Frame",
+                        "benefit": "You may re-roll 1d20 on all AGI tests which rely
+                        on balance or contortion.",
+                        "penalty": "Your carry weight is 150 + (5 x STR) lbs.,
+                        rather than 150 + (10 x STR) lbs."
+                    }
+                ]
+            },
+            {
+                "name": "Vault Dweller",
+                "description": "When the bombs were falling, you or your predecessors
+                were lucky enough to be safely secured in
+                one of the one hundred and twenty-two Vault-Tec
+                facilities, deep underground protected by thick blast
+                doors and layers of rock and concrete. Your family
+                either had enough money to buy their space or were
+                randomly selected to enter the vault to be saved from
+                the nuclear devastation above—perhaps only to be
+                condemned to immoral experiments run by Vault-Tec
+                on unwitting participants.
+                You are free from mutation and disease. The Vault-Tec
+                program has afforded you a safe home for some
+                time, but not without some cost. The vault you came
+                from used you as a human test subject, manipulating
+                your understanding of the world and your behavior
+                in order to study you. That’s left you with a profound
+                psychological change, compared to the survivors on
+                the surface you now know, and affects how you make
+                your way through the wasteland.
+                Whether through design or poor planning, many of
+                the vaults were not well stocked or prepared for the
+                long wait until nuclear fallout had reached safe
+                levels outside, and many fell into disrepair or out
+                of supplies. Due to these shortcomings, many
+                vault dwellers sought help from the surface, and
+                many vaults opened in order to allow supplies
+                to reach them. By opening their vault doors,
+                the isolated societies inside opened themselves
+                up to mixing with the survivors above,
+                and established a permanent connection with
+                the surface—the most notable example being
+                the residents of Vault 15, who split up and went on
+                to establish the settlement Shady Sands, as well as the
+                raiding gangs of the Jackals, Vipers, and Khans when
+                their vault opened.",
+                "trait": [{
+                    "name": "Vault Kid",
+                    "description": "Your healthier start to life at the hands of trained doctors
+                    and sophisticated auto-docs means you reduce the difficulty
+                    of all END tests to resist the effects of disease. In addition,
+                    your carefully-planned upbringing means you have one
+                    additional tag skill of your choice.
+                    You may also work with the Gamemaster to determine what
+                    sort of experiment took place within your Vault. Once per
+                    quest, the GM may introduce a complication which reflects
+                    the nature of the experiment you unwittingly took part in, or
+                    introduce a complication related to your early life of isolation
+                    and confinement within the Vault. If the GM does this,
+                    you immediately regain one Luck Point."
+                }]
+            }
+        ]
+    },
+    {
+        "equipmentPacks": [
+            
+        ]
+    },
+    {
+        "perks": [
+            {
+                "name": "Action Boy/Girl",
+                "ranks": 1,
+                "requirements": [{
+                    "levels": null,
+                    "attributes": null
+                }],
+                "description": "When you spend AP to take an additional
+                major action, you do not suffer the
+                increased skill test difficulty during your
+                second action"
+            },
+            {
+                "name": "Adamantium Skeleton",
+                "ranks": 3,
+                "requirements": [{
+                    "levels": [1, 4, 7],
+                    "attributes": [{
+                        "END": 7
+                    }]
+                }],
+                "description": "When you suffer damage, the amount
+                of damage needed to inflict a critical
+                hit on you increases by your rank in
+                this perk. For example, if you have
+                one rank in this perk, you suffer a critical hit from 6
+                or more damage, rather than 5 or more. Each time you
+                take this perk, the level requirement increases by 3."
+            },
+            {
+                "name": "Adrenalin Rush",
+                "ranks": 1,
+                "requirements": [{
+                    "levels": null,
+                    "attributes": [{
+                        "STR": 7
+                    }]
+                }],
+                "description": "When your health is below its
+                maximum value, you count your
+                STR score as 10 for all purposes
+                when attempting a STR-based
+                skill test or melee attack."
+            },
+            {
+                "name": "Animal Friend",
+                "ranks": 2,
+                "requirements": [{
+                    "levels": [1, 6],
+                    "attributes": [{
+                        "CHA": 6
+                    }]
+                }],
+                "description": "At rank 1, whenever a creature NPC with
+                the Mammal, Lizard, or Insect keyword
+                would attack you, roll 1CD: on any result
+                other than an Effect, the creature chooses
+                not to attack you, although it may still
+                attack another character it can target.
+                At rank 2, you can attempt a CHA + Survival test with
+                a difficulty of 2 as a major action. If you succeed, the
+                animal treats you as friendly and will attack anyone
+                who attacks you. Mighty and Legendary animals are
+                unaffected by this perk. Each time you take this perk,
+                the level requirement increases by 5."
+            },
+            {
+                "name": "Aquaboy/Aquagirl",
+                "ranks": 2,
+                "requirements": [{
+                    "levels": [1, 4],
+                    "attributes": [{
+                        "END": 5
+                    }]
+                }],
+                "description": "Water is your ally. At rank 1, you no longer take radiation
+                damage from swimming in irradiated water, and
+                you can hold your breath for twice as long as normal.
+                At rank 2, enemies add +2 to the difficulty to tests
+                to detect you while you are submerged underwater.
+                Each time you take this perk, the level requirement
+                increases by 3."
+            },
+            {
+                "name": "Armorer",
+                "ranks": 4,
+                "requirements": [{
+                    "levels": [0, 4, 8, 12],
+                    "attributes": [{
+                        "STR": 5,
+                        "INT": 6
+                    }]
+                }],
+                "description": "You can modify armor
+                with armor mods.
+                Each rank in this perk
+                unlocks an additional
+                rank of mods: rank 1
+                unlocks rank 1 mods,
+                rank 2 unlocks rank 2
+                mods, etc.
+                Each time you take this perk, the level requirement
+                increases by 4."
+            },
+            {
+                "name": "Awareness",
+                "ranks": 1,
+                "requirements": [{
+                    "levels": null,
+                    "attributes": [{
+                        "PER": 7
+                    }]
+                }],
+                "description": "When you take the Aim
+                minor action at a target
+                within Close range, you spot
+                their weaknesses and can attack more efficiently.
+                The next attack you make against that target
+                gains the Piercing 1 damage effect, or improves the
+                rating of any existing Piercing X damage effect by 1."
+            },
+            {
+                "name": "Barbarian",
+                "ranks": 1,
+                "requirements": [{
+                    "levels": 4,
+                    "attributes": [{
+                        "STR": 7
+                    }],
+                    "isRobot": false
+                }],
+                "description": "Your physical Damage
+                Resistance increases on all hit
+                locations based on your STR.
+                You do not gain this benefit
+                while wearing Power Armor.
+                STR 7-8: +1 physical DR
+                STR 9-10: +2 physical DR
+                STR 11+: +3 physical DR"
+            },
+            {
+                "name": "Basher",
+                "ranks": 1,
+                "requirements": [{
+                    "levels": null,
+                    "attributes": [{
+                        "STR": 6
+                    }]
+                }],
+                "description": "When you make a melee attack
+                by bashing with your gun
+                (see p.111), your attack
+                gains the Vicious damage effect."
+            },
+            {
+                "name": "Better Criticals",
+                "ranks": 1,
+                "requirements": [{
+                    "levels": null,
+                    "attributes": [{
+                        "LCK": 9
+                    }]
+                }],
+                "description": ""
+            },
+            {
+                "name": "",
+                "ranks": ,
+                "requirements": [{
+                    "levels": ,
+                    "attributes": 
+                }],
+                "description": ""
+            },
+            {
+                "name": "",
+                "ranks": ,
+                "requirements": [{
+                    "levels": ,
+                    "attributes": 
+                }],
+                "description": ""
+            },
+            {
+                "name": "",
+                "ranks": ,
+                "requirements": [{
+                    "levels": ,
+                    "attributes": 
+                }],
+                "description": ""
+            },
+            {
+                "name": "",
+                "ranks": ,
+                "requirements": [{
+                    "levels": ,
+                    "attributes": 
+                }],
+                "description": ""
+            },
+            {
+                "name": "",
+                "ranks": ,
+                "requirements": [{
+                    "levels": ,
+                    "attributes": 
+                }],
+                "description": ""
+            },
+            {
+                "name": "",
+                "ranks": ,
+                "requirements": [{
+                    "levels": ,
+                    "attributes": 
+                }],
+                "description": ""
+            },
+            {
+                "name": "",
+                "ranks": ,
+                "requirements": [{
+                    "levels": ,
+                    "attributes": 
+                }],
+                "description": ""
+            },
+            {
+                "name": "",
+                "ranks": ,
+                "requirements": [{
+                    "levels": ,
+                    "attributes": 
+                }],
+                "description": ""
+            },
+            {
+                "name": "",
+                "ranks": ,
+                "requirements": [{
+                    "levels": ,
+                    "attributes": 
+                }],
+                "description": ""
+            },
+            {
+                "name": "",
+                "ranks": ,
+                "requirements": [{
+                    "levels": ,
+                    "attributes": 
+                }],
+                "description": ""
+            },
+            
+        ]
+    },
+    {
+        "equipment": [{
+            "ammo": [{
+
+            }],
+            "smallGuns": [{
+                "mods": [{
+
+                }]
+            }],
+            "energyWeapons": [{
+                "mods": [{
+                    
+                }]
+            }],
+            "bigGuns": [{
+
+            }],
+            "meleeWeapons": [{
+
+            }],
+            "throwingWeapons": [{
+
+            }],
+            "explosives": [{
+
+            }],
+            "apparel": [{
+                "clothing": [{
+
+                }],
+                "outfits": [{
+
+                }],
+                "headgear": [{
+
+                }],
+                "mods": [{
+
+                }]
+            }],
+            "armor": [{
+                "raider": [{
+                    "mods": [{
+
+                    }]
+                }],
+                "leather": [{
+                    "mods": [{
+                        
+                        }]
+                }],
+                "metal": [{
+                    "mods": [{
+                        
+                        }]
+                }],
+                "combat": [{
+                    "mods": [{
+                        
+                        }]
+                }],
+                "synth": [{
+                    "mods": [{
+                        
+                        }]
+                }],
+                "vaultTec": [{
+
+                }],
+                "mods": [{
+
+                }]
+            }],
+            "powerArmor": [{
+                "mods": [{
+
+                }]
+            }],
+            "robotArmor": [{
+
+            }],
+            "consumables": [{
+                "food": [{
+
+                }],
+                "drinks": [{
+
+                }],
+                "chems": [{
+
+                }],
+                "other": [{
+                    
+                }]
+            }],
+            "booksAndMags": [{
+
+            }],
+            "misc": [{
+                "utlity": [{
+
+                }],
+                "robotMods": [{
+                    
+                }]
+            }]
+        }]
+    }
+]
