@@ -10,12 +10,12 @@ Automate the character creation process for the Fallout Tabletop Roleplaying Gam
 
 ## Roadmap
 
-- Complete Perks list in `data.json`
+- Flesh out creator.py, give menu options functionality (creating new characters, customizing stats, selecting perks, etc.)
 
-- Complete Equipment Packs list in `data.json`.
+- Integration of saving and exporting/importing characters, likely using JSON format, medium priority, shouldn't be overly difficult
 
-- Proof of concept in local program, either python using graphics.py, or incorporation into Unity C# program.
+- Complete Perks list in `data.json`, low priority, enough already to use for dev purposes.
 
-- Integration of saving sheets, likely using JSON format
+- Complete Equipment Packs list in `data.json`, low priority. Requires logging of all in-game items.
 
-- Begin website development and integration.
+- Begin website development and integration, low priority, implement as local program first.
