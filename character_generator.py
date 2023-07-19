@@ -52,10 +52,10 @@ def generateChar():
     printDelay('Please enter the file name to save the character to: ', textSpeed, False)
     fileName = input()
     printDelay('Generating new character...', textSpeed, True)
-    if os.path.exists(f'' + fileName + '.json'):
+    if os.path.exists(f'{fileName}.json'):
         printDelay('Character already exists, incrementing file name.', textSpeed, True)
         i = 1
-        while os.path.exists(f'' + fileName + str(i) + '.json'):
+        while os.path.exists(f'{fileName + str(i)}.json'):
             i += 1
         fileName += str(i)
     printDelay('Your character\'s file name is ' + fileName + '.json', textSpeed, True)
