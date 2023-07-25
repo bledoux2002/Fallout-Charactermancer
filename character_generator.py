@@ -10,8 +10,8 @@ from time import sleep
     
 #    def __init__(self):
 
-textSpeed = 0.0325
-#textSpeed = 0    
+#textSpeed = 0.0325
+textSpeed = 0    
 def main():
     while True:
         printDelay('Welcome to the Fallout Tabletop Roleplaying Game Character Creator!', textSpeed, True)
@@ -52,13 +52,24 @@ def generateChar():
     printDelay('Please enter the file name to save the character to: ', textSpeed, False)
     fileName = input()
     printDelay('Generating new character...', textSpeed, True)
-    if os.path.exists(f'{fileName}.json'):
+    
+    # Increment filename if already in use
+    if os.path.exists(f"{fileName}.json"):
         printDelay('Character already exists, incrementing file name.', textSpeed, True)
         i = 1
-        while os.path.exists(f'{fileName + str(i)}.json'):
+        while os.path.exists(f"{fileName + str(i)}.json"):
             i += 1
         fileName += str(i)
-    printDelay('Your character\'s file name is ' + fileName + '.json', textSpeed, True)
+    printDelay(f"Your character\'s file name is {fileName}.json", textSpeed, True)
+    
+    # Create copy of template.json w/ new fileName
+    with open("template.json", "r") as templateFile:
+        #template = templateFile.read()
+        #testChar = json.loads(template)
+        testChar = json.load(templateFile)
+        with open(f"{fileName}.json", "w") as charFile:
+            json.dump(testChar, charFile, indent=4)
+            print(f"Successfully copied , indent=4template to {fileName}.json")
     main()
  
 #listChar() gives a list of all character files saved/uploaded, and will have a view function to see each character's stats       
@@ -73,5 +84,6 @@ def uploadChar():
     charFile = input() + '.json'
     printDelay('Uploading ' + charFile + '...', textSpeed, True)
     main()
-    
-main()
+
+if __name__ == "__main__":
+    main()
