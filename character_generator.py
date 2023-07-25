@@ -25,7 +25,8 @@ def main():
         #either use if/elif/elif or match-case/switch, determine efficiency for menu selection
         match menuChoice:
             case '1':
-                generateChar()
+                fileName = generateChar()
+                editChar(fileName)
             case '2':
                 listChar()
             case '3':
@@ -60,18 +61,24 @@ def generateChar():
         while os.path.exists(f"{fileName + str(i)}.json"):
             i += 1
         fileName += str(i)
-    printDelay(f"Your character\'s file name is {fileName}.json", textSpeed, True)
+    fileName += ".json"
+    printDelay(f"Your character\'s file name is {fileName}", textSpeed, True)
     
     # Create copy of template.json w/ new fileName
     with open("template.json", "r") as templateFile:
         #template = templateFile.read()
         #testChar = json.loads(template)
         testChar = json.load(templateFile)
-        with open(f"{fileName}.json", "w") as charFile:
+        with open(f"{fileName}", "w") as charFile:
             json.dump(testChar, charFile, indent=4)
-            print(f"Successfully copied , indent=4template to {fileName}.json")
+            print(f"Successfully copied template to {fileName}")
+    return (f"{fileName}")
+
+#editChar() takes json filename as input, opens file as write file, presents menu listing contents of character sheet to edit
+def editChar(file):
+    pass
     main()
- 
+
 #listChar() gives a list of all character files saved/uploaded, and will have a view function to see each character's stats       
 def listChar():
     printDelay('Here are your currently saved characters: ', textSpeed, True)
