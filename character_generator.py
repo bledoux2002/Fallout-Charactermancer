@@ -55,10 +55,10 @@ def generateChar():
     printDelay('Generating new character...', textSpeed, True)
     
     # Increment filename if already in use
-    if os.path.exists(f"{fileName}.json"):
+    if os.path.exists(f"characters/{fileName}.json"):
         printDelay('Character already exists, incrementing file name.', textSpeed, True)
         i = 1
-        while os.path.exists(f"{fileName + str(i)}.json"):
+        while os.path.exists(f"characters/{fileName + str(i)}.json"):
             i += 1
         fileName += str(i)
     fileName += ".json"
@@ -69,7 +69,7 @@ def generateChar():
         #template = templateFile.read()
         #testChar = json.loads(template)
         testChar = json.load(templateFile)
-        with open(f"{fileName}", "w") as charFile:
+        with open(f"characters/{fileName}", "w") as charFile:
             json.dump(testChar, charFile, indent=4)
             print(f"Successfully copied template to {fileName}")
     return (f"{fileName}")
