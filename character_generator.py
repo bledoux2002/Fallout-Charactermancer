@@ -13,16 +13,11 @@ from time import sleep
 #textSpeed = 0.0325
 textSpeed = 0    
 def main():
-    while True:
-        printDelay('Welcome to the Fallout Tabletop Roleplaying Game Character Creator!', textSpeed, True)
-        printDelay('Please select one of the options from the menu below by entering the corresponding number:', textSpeed, True)
-        printDelay('1. Create a new character', textSpeed, True)
-        printDelay('2. View saved characters', textSpeed, True)
-        printDelay('3. Upload a character file', textSpeed, True)
-        printDelay('4. Quit', textSpeed, True)
-        printDelay('Please enter corresponding number: ', textSpeed, False)
-        menuChoice = input()
-        #either use if/elif/elif or match-case/switch, determine efficiency for menu selection
+    printDelay('Welcome to the Fallout Tabletop Roleplaying Game Character Creator!', textSpeed, True)
+    printMenu()
+    menuChoice = input()
+    #While quit has not been selected, run appropriate code for selection
+    while menuChoice != '5':
         match menuChoice:
             case '1':
                 fileName = generateChar()
@@ -32,12 +27,14 @@ def main():
             case '3':
                 uploadChar()
             case '4':
-                printDelay('Bombs dropping in ', textSpeed, False)
-                printDelay('3....2....1....', 0.2, True)
-                quit()
+                settings()
             case _:
                 printDelay('Entry not recognized', textSpeed, True)
-                main()
+        printMenu()
+        menuChoice = input()
+    #Quit selected
+    printDelay('Bombs dropping in ', textSpeed, False)
+    printDelay('3....2....1....', 0.2, True)
 
 #printDelay() adds a pause between each character being printed to simulate a Fallout-style terminal
 def printDelay(str, speed, newLine):
@@ -47,6 +44,15 @@ def printDelay(str, speed, newLine):
         sleep(speed)
     if newLine:
         print('')
+
+def printMenu():
+    printDelay('Please select one of the options from the menu below by entering the corresponding number:', textSpeed, True)
+    printDelay('1. Create a new character', textSpeed, True)
+    printDelay('2. View saved characters', textSpeed, True)
+    printDelay('3. Upload a character file', textSpeed, True)
+    printDelay('4. Options', textSpeed, True)
+    printDelay('5. Quit', textSpeed, True)
+    printDelay('Please enter corresponding number: ', textSpeed, False)
 
 #generateChar() takes the template.json character file and creates a copy to be editted
 def generateChar():
@@ -77,20 +83,34 @@ def generateChar():
 #editChar() takes json filename as input, opens file as write file, presents menu listing contents of character sheet to edit
 def editChar(file):
     pass
-    main()
 
 #listChar() gives a list of all character files saved/uploaded, and will have a view function to see each character's stats       
 def listChar():
     printDelay('Here are your currently saved characters: ', textSpeed, True)
-    pass
-    main()
 
 #uploadChar() registers a character file from the user inputted name, afetr the file has been dropped into the program folder 
 def uploadChar():
     printDelay('Please type the name of the character file you wish to upload: ', textSpeed, False)
     charFile = input() + '.json'
     printDelay('Uploading ' + charFile + '...', textSpeed, True)
-    main()
+
+#settings() will present another menu for different elements of the program to change, such as text speed
+def settings():
+    printDelay('Please select one of the options from the menu below by enterring the corresponding number:', textSpeed, True)
+    printDelay('1. Text speed', textSpeed, True)
+    printDelay('2. Back', textSpeed, True)
+    menuInput = input()
+    while menuInput != '2':
+        match menuInput:
+            case '1':
+                printDelay('PSYCH! Coming soon tho...')
+                changeTextSpeed()
+            case _:
+                printDelay('Oop, you done goofed. Try it again.')
+        menuInput = input()
+
+def changeTextSpeed():
+    pass
 
 if __name__ == "__main__":
     main()
