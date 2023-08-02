@@ -10,9 +10,7 @@ Automate the character creation process for the Fallout Tabletop Roleplaying Gam
 
 ## Roadmap
 
-- FIX RECURSION ISSUES, instead of calling main, function ends and goes back to begining of first while loop, whoul be while choice != 4.
-
-- Flesh out creator.py, give menu options functionality (creating new characters, customizing stats, selecting perks, etc.)
+- Flesh out creator.py, give menu options functionality (creating new characters, customizing stats, selecting perks, settings, etc.)
 
 - Integration of saving and exporting/importing characters, likely using JSON format, medium priority, shouldn't be overly difficult
 
@@ -21,3 +19,5 @@ Automate the character creation process for the Fallout Tabletop Roleplaying Gam
 - Complete Equipment Packs list in `data.json`, low priority. Requires logging of all in-game items.
 
 - Begin website development and integration, low priority, implement as local program first.
+
+- Begin Unity project for local visual implementation, low priority, implement as local program first.
