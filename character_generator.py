@@ -11,8 +11,10 @@ from time import sleep
 #    def __init__(self):
 
 #textSpeed = 0.0325
-textSpeed = 0    
+textSpeed = 0
 def main():
+    textSpeed = 
+    textSpeed = 0
     printDelay('Welcome to the Fallout Tabletop Roleplaying Game Character Creator!', textSpeed, True)
     printMenu()
     menuChoice = input()
@@ -96,18 +98,19 @@ def uploadChar():
 
 #settings() will present another menu for different elements of the program to change, such as text speed
 def settings():
-    printDelay('Please select one of the options from the menu below by enterring the corresponding number:', textSpeed, True)
-    printDelay('1. Text speed', textSpeed, True)
-    printDelay('2. Back', textSpeed, True)
-    menuInput = input()
-    while menuInput != '2':
-        match menuInput:
+    selection = '0'
+    while selection != '2'
+        printDelay('Please select one of the options from the menu below by enterring the corresponding number:', textSpeed, True)
+        printDelay('1. Text speed', textSpeed, True)
+        printDelay('2. Back', textSpeed, True)
+        selection = input()
+        match selection:
             case '1':
                 printDelay('PSYCH! Coming soon tho...')
                 changeTextSpeed()
             case _:
                 printDelay('Oop, you done goofed. Try it again.')
-        menuInput = input()
+        selection = input() #necessary?
 
 def changeTextSpeed():
     pass
