@@ -502,11 +502,7 @@
                         "LCK": 5
                     }]
                 }],
-                "description": "When you are scavenging
-                a location that contains
-                food, you gain 1 additional
-                random food item, without
-                spending AP."
+                "description": "When you are scavenging a location that contains food, you gain 1 additional random food item, without spending AP."
             },
             {
                 "name": "Cap Collector",
@@ -517,9 +513,96 @@
                         "CHA": 5
                     }]
                 }],
-                "description": "When you buy or sell items, you
-                may increase or decrease the price
-                of the goods being traded by 10%."
+                "description": "When you buy or sell items, you may increase or decrease the price of the goods being traded by 10%."
+            },
+            {
+                "name": "Cautious Nature",
+                "ranks": 1,
+                "requirements": [{
+                    "levels": null,
+                    "attributes": [{
+                        "PER": 7
+                    }]
+                }],
+                "description": "Whenever you attempt a skill test, and you buy one or more d20s by spending Action Points, you may re-roll 1d20 on that test. You may not purchase this perk if you have Daring Nature."
+            },
+            {
+                "name": "Center Mass",
+                "ranks": 1,
+                "requirements": [{
+                    "levels": null,
+                    "attributes": [{
+                        "AGI": 7
+                    }]
+                }],
+                "description": "When you make a ranged attack, you may choose to strike your target’s Torso location (or equivalent, for creatures that use a different location table) without increasing the difficulty of the attack. In addition, you may re-roll 1d20 when making the test for your attack."
+            },
+            {
+                "name": "Chem Resistant",
+                "ranks": 2,
+                "requirements": [{
+                    "levels": [1, 5],
+                    "attributes": [{
+                        "END": 7
+                    }]
+                }],
+                "description": "At rank 1, roll one fewer CD when determining if you become addicted to chems, to a minimum of 0. At rank 2, you cannot become addicted to chems. Each time you take this perk, the level requirement increases by 4."
+            },
+            {
+                "name": "Chemist",
+                "ranks": 1,
+                "requirements": [{
+                    "levels": null,
+                    "attributes": [{
+                        "INT": 7
+                    }]
+                }],
+                "description": "Chems you create last twice as long as normal (see p.164). In addition, you unlock chems recipes that have this perk as a requirement."
+            },
+            {
+                "name": "Commando",
+                "ranks": 2,
+                "requirements": [{
+                    "levels": [2, 5],
+                    "attributes": [{
+                        "AGI": 8
+                    }]
+                }],
+                "description": "When you make a ranged attack with any weapon with a Fire Rate of 3 or higher (except heavy weapons), you add +1DCD per rank to the weapon’s damage. Each time you take this perk, the level requirement increases by 3."
+            },
+            {
+                "name": "Comprehension",
+                "ranks": 1,
+                "requirements": [{
+                    "levels": null,
+                    "attributes": [{
+                        "INT": 6
+                    }]
+                }],
+                "description": "After you use the bonus gained from reading a magazine, roll 1CD. If you roll an Effect, you may use that bonus one additional time."
+            },
+            {
+                "name": "Concentrated Fire",
+                "ranks": 1,
+                "requirements": [{
+                    "levels": null,
+                    "attributes": [{
+                        "PER": 8,
+                        "AGI": 6
+                    }]
+                }],
+                "description": "When you make a ranged attack and spend ammunition to increase the damage, you may re-roll up to 3CD for your damage roll."
+            },
+            {
+                "name": "Daring Nature",
+                "ranks": 1,
+                "requirements": [{
+                    "levels": null,
+                    "attributes": [{
+                        "LCK": 7
+                    }]
+                }],
+                "description": "Whenever you attempt a skill test, and you buy one or more d20s by giving the gamemaster Action Points, you may re-roll 1d20 on that test. You may not purchase this perk if you have Cautious Nature."
             },
             {
                 "name": "",
@@ -548,7 +631,447 @@
                 }],
                 "description": ""
             },
-            
+            {
+                "name": "",
+                "ranks": ,
+                "requirements": [{
+                    "levels": ,
+                    "attributes": 
+                }],
+                "description": ""
+            },
+            {
+                "name": "",
+                "ranks": ,
+                "requirements": [{
+                    "levels": ,
+                    "attributes": 
+                }],
+                "description": ""
+            },
+            {
+                "name": "",
+                "ranks": ,
+                "requirements": [{
+                    "levels": ,
+                    "attributes": 
+                }],
+                "description": ""
+            },
+            {
+                "name": "",
+                "ranks": ,
+                "requirements": [{
+                    "levels": ,
+                    "attributes": 
+                }],
+                "description": ""
+            },
+            {
+                "name": "",
+                "ranks": ,
+                "requirements": [{
+                    "levels": ,
+                    "attributes": 
+                }],
+                "description": ""
+            },
+            {
+                "name": "",
+                "ranks": ,
+                "requirements": [{
+                    "levels": ,
+                    "attributes": 
+                }],
+                "description": ""
+            },
+            {
+                "name": "",
+                "ranks": ,
+                "requirements": [{
+                    "levels": ,
+                    "attributes": 
+                }],
+                "description": ""
+            },
+            {
+                "name": "",
+                "ranks": ,
+                "requirements": [{
+                    "levels": ,
+                    "attributes": 
+                }],
+                "description": ""
+            },
+            {
+                "name": "",
+                "ranks": ,
+                "requirements": [{
+                    "levels": ,
+                    "attributes": 
+                }],
+                "description": ""
+            },
+            {
+                "name": "",
+                "ranks": ,
+                "requirements": [{
+                    "levels": ,
+                    "attributes": 
+                }],
+                "description": ""
+            },
+            {
+                "name": "",
+                "ranks": ,
+                "requirements": [{
+                    "levels": ,
+                    "attributes": 
+                }],
+                "description": ""
+            },
+            {
+                "name": "",
+                "ranks": ,
+                "requirements": [{
+                    "levels": ,
+                    "attributes": 
+                }],
+                "description": ""
+            },
+            {
+                "name": "",
+                "ranks": ,
+                "requirements": [{
+                    "levels": ,
+                    "attributes": 
+                }],
+                "description": ""
+            },
+            {
+                "name": "",
+                "ranks": ,
+                "requirements": [{
+                    "levels": ,
+                    "attributes": 
+                }],
+                "description": ""
+            },
+            {
+                "name": "",
+                "ranks": ,
+                "requirements": [{
+                    "levels": ,
+                    "attributes": 
+                }],
+                "description": ""
+            },
+            {
+                "name": "",
+                "ranks": ,
+                "requirements": [{
+                    "levels": ,
+                    "attributes": 
+                }],
+                "description": ""
+            },
+            {
+                "name": "",
+                "ranks": ,
+                "requirements": [{
+                    "levels": ,
+                    "attributes": 
+                }],
+                "description": ""
+            },
+            {
+                "name": "",
+                "ranks": ,
+                "requirements": [{
+                    "levels": ,
+                    "attributes": 
+                }],
+                "description": ""
+            },
+            {
+                "name": "",
+                "ranks": ,
+                "requirements": [{
+                    "levels": ,
+                    "attributes": 
+                }],
+                "description": ""
+            },
+            {
+                "name": "",
+                "ranks": ,
+                "requirements": [{
+                    "levels": ,
+                    "attributes": 
+                }],
+                "description": ""
+            },
+            {
+                "name": "",
+                "ranks": ,
+                "requirements": [{
+                    "levels": ,
+                    "attributes": 
+                }],
+                "description": ""
+            },
+            {
+                "name": "",
+                "ranks": ,
+                "requirements": [{
+                    "levels": ,
+                    "attributes": 
+                }],
+                "description": ""
+            },
+            {
+                "name": "",
+                "ranks": ,
+                "requirements": [{
+                    "levels": ,
+                    "attributes": 
+                }],
+                "description": ""
+            },
+            {
+                "name": "",
+                "ranks": ,
+                "requirements": [{
+                    "levels": ,
+                    "attributes": 
+                }],
+                "description": ""
+            },
+            {
+                "name": "",
+                "ranks": ,
+                "requirements": [{
+                    "levels": ,
+                    "attributes": 
+                }],
+                "description": ""
+            },
+            {
+                "name": "",
+                "ranks": ,
+                "requirements": [{
+                    "levels": ,
+                    "attributes": 
+                }],
+                "description": ""
+            },
+            {
+                "name": "",
+                "ranks": ,
+                "requirements": [{
+                    "levels": ,
+                    "attributes": 
+                }],
+                "description": ""
+            },
+            {
+                "name": "",
+                "ranks": ,
+                "requirements": [{
+                    "levels": ,
+                    "attributes": 
+                }],
+                "description": ""
+            },
+            {
+                "name": "",
+                "ranks": ,
+                "requirements": [{
+                    "levels": ,
+                    "attributes": 
+                }],
+                "description": ""
+            },
+            {
+                "name": "",
+                "ranks": ,
+                "requirements": [{
+                    "levels": ,
+                    "attributes": 
+                }],
+                "description": ""
+            },
+            {
+                "name": "",
+                "ranks": ,
+                "requirements": [{
+                    "levels": ,
+                    "attributes": 
+                }],
+                "description": ""
+            },
+            {
+                "name": "",
+                "ranks": ,
+                "requirements": [{
+                    "levels": ,
+                    "attributes": 
+                }],
+                "description": ""
+            },
+            {
+                "name": "",
+                "ranks": ,
+                "requirements": [{
+                    "levels": ,
+                    "attributes": 
+                }],
+                "description": ""
+            },
+            {
+                "name": "",
+                "ranks": ,
+                "requirements": [{
+                    "levels": ,
+                    "attributes": 
+                }],
+                "description": ""
+            },
+            {
+                "name": "",
+                "ranks": ,
+                "requirements": [{
+                    "levels": ,
+                    "attributes": 
+                }],
+                "description": ""
+            },
+            {
+                "name": "",
+                "ranks": ,
+                "requirements": [{
+                    "levels": ,
+                    "attributes": 
+                }],
+                "description": ""
+            },
+            {
+                "name": "",
+                "ranks": ,
+                "requirements": [{
+                    "levels": ,
+                    "attributes": 
+                }],
+                "description": ""
+            },
+            {
+                "name": "",
+                "ranks": ,
+                "requirements": [{
+                    "levels": ,
+                    "attributes": 
+                }],
+                "description": ""
+            },
+            {
+                "name": "",
+                "ranks": ,
+                "requirements": [{
+                    "levels": ,
+                    "attributes": 
+                }],
+                "description": ""
+            },
+            {
+                "name": "",
+                "ranks": ,
+                "requirements": [{
+                    "levels": ,
+                    "attributes": 
+                }],
+                "description": ""
+            },
+            {
+                "name": "",
+                "ranks": ,
+                "requirements": [{
+                    "levels": ,
+                    "attributes": 
+                }],
+                "description": ""
+            },
+            {
+                "name": "",
+                "ranks": ,
+                "requirements": [{
+                    "levels": ,
+                    "attributes": 
+                }],
+                "description": ""
+            },
+            {
+                "name": "",
+                "ranks": ,
+                "requirements": [{
+                    "levels": ,
+                    "attributes": 
+                }],
+                "description": ""
+            },
+            {
+                "name": "",
+                "ranks": ,
+                "requirements": [{
+                    "levels": ,
+                    "attributes": 
+                }],
+                "description": ""
+            },
+            {
+                "name": "",
+                "ranks": ,
+                "requirements": [{
+                    "levels": ,
+                    "attributes": 
+                }],
+                "description": ""
+            },
+            {
+                "name": "",
+                "ranks": ,
+                "requirements": [{
+                    "levels": ,
+                    "attributes": 
+                }],
+                "description": ""
+            },
+            {
+                "name": "",
+                "ranks": ,
+                "requirements": [{
+                    "levels": ,
+                    "attributes": 
+                }],
+                "description": ""
+            },
+            {
+                "name": "",
+                "ranks": ,
+                "requirements": [{
+                    "levels": ,
+                    "attributes": 
+                }],
+                "description": ""
+            },
+            {
+                "name": "",
+                "ranks": ,
+                "requirements": [{
+                    "levels": ,
+                    "attributes": 
+                }],
+                "description": ""
+            }
         ]
     },
     {
