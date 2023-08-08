@@ -139,7 +139,7 @@ def settings():
                     case '4':
                         textSpeed = 0
                     case _:
-                        printDelay('Sorry, that wasn\'t an option. Try again')
+                        printDelay('Sorry, that wasn\'t an option. Try again', textSpeed, True)
                 with open('settings.json', 'r+') as setFile:
                     settingsData = json.load(setFile)
                     settingsData['tSPeed'] = textSpeed
