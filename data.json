@@ -264,7 +264,7 @@
                     },
                     {
                         "name": "Buzz-Saw",
-                        "effect": "You can cut objects and make melee attacks with a circular saw. The buzz-saw inflicts 3CD Piercing 1 physical damage."
+                        "effect": "You can cut objects and make melee attacks with a circular saw. The buzz-saw inflicts 3 CD Piercing 1 physical damage."
                     },
                     {
                         "name": "Flamer",
@@ -276,7 +276,7 @@
                     },
                     {
                         "name": "Pincer",
-                        "effect": "You can pick up objects with an individual pincer that weighes no more than 40 lbs. and manipulate objects in your environment. You may also make unarmed attacks (2CD physical damage) with the pincer."
+                        "effect": "You can pick up objects with an individual pincer that weighes no more than 40 lbs. and manipulate objects in your environment. You may also make unarmed attacks (2 CD physical damage) with the pincer."
                     }
                 ]
             },
@@ -301,7 +301,7 @@
                     },
                     {
                         "name": "Heavy Handed",
-                        "benefit": "Your Melee Damage bonus increases by +1CD.",
+                        "benefit": "Your Melee Damage bonus increases by +1 CD.",
                         "penalty": "Your melee and unarmed attacks suffer a complication on a 19 or 20, rather than only a 20."
                     },
                     {
@@ -368,7 +368,7 @@
                         "CHA": 6
                     }]
                 }],
-                "description": "At rank 1, whenever a creature NPC with the Mammal, Lizard, or Insect keyword would attack you, roll 1CD: on any result other than an Effect, the creature chooses not to attack you, although it may still attack another character it can target. At rank 2, you can attempt a CHA + Survival test with a difficulty of 2 as a major action. If you succeed, the animal treats you as friendly and will attack anyone who attacks you. Mighty and Legendary animals are unaffected by this perk. Each time you take this perk, the level requirement increases by 5."
+                "description": "At rank 1, whenever a creature NPC with the Mammal, Lizard, or Insect keyword would attack you, roll 1 CD: on any result other than an Effect, the creature chooses not to attack you, although it may still attack another character it can target. At rank 2, you can attempt a CHA + Survival test with a difficulty of 2 as a major action. If you succeed, the animal treats you as friendly and will attack anyone who attacks you. Mighty and Legendary animals are unaffected by this perk. Each time you take this perk, the level requirement increases by 5."
             },
             {
                 "name": "Aquaboy/Aquagirl",
@@ -458,7 +458,7 @@
                         "CHA": 6
                     }]
                 }],
-                "description": "The Black Widow perk affects men and masculine characters, while the Lady Killer perk affects women and feminine characters—they are otherwise identical. When you attempt a CHA based skill test to influence a character of the chosen gender, you may re-roll 1d20. In addition, your attacks inflict +1CD additional damage against characters of the chosen gender."
+                "description": "The Black Widow perk affects men and masculine characters, while the Lady Killer perk affects women and feminine characters—they are otherwise identical. When you attempt a CHA based skill test to influence a character of the chosen gender, you may re-roll 1d20. In addition, your attacks inflict +1 CD additional damage against characters of the chosen gender."
             },
             {
                 "name": "Blacksmith",
@@ -480,7 +480,7 @@
                         "AGI": 9
                     }]
                 }],
-                "description": "When you move into reach of an opponent and make a melee attack against them in one turn, you may re-roll one d20 on your attack. At rank 2, you also inflict +1CD damage with that attack. Each time you take this perk, the level requirement increases by 3."
+                "description": "When you move into reach of an opponent and make a melee attack against them in one turn, you may re-roll one d20 on your attack. At rank 2, you also inflict +1 CD damage with that attack. Each time you take this perk, the level requirement increases by 3."
             },
             {
                 "name": "Bloody Mess",
@@ -491,7 +491,7 @@
                         "LCK": 6
                     }]
                 }],
-                "description": "When you inflict a critical hit, roll 1CD; if you roll an Effect, you inflict one additional injury to a random location."
+                "description": "When you inflict a critical hit, roll 1 CD; if you roll an Effect, you inflict one additional injury to a random location."
             },
             {
                 "name": "Can Do!",
@@ -568,7 +568,7 @@
                         "AGI": 8
                     }]
                 }],
-                "description": "When you make a ranged attack with any weapon with a Fire Rate of 3 or higher (except heavy weapons), you add +1DCD per rank to the weapon’s damage. Each time you take this perk, the level requirement increases by 3."
+                "description": "When you make a ranged attack with any weapon with a Fire Rate of 3 or higher (except heavy weapons), you add +1 CD per rank to the weapon’s damage. Each time you take this perk, the level requirement increases by 3."
             },
             {
                 "name": "Comprehension",
@@ -579,7 +579,7 @@
                         "INT": 6
                     }]
                 }],
-                "description": "After you use the bonus gained from reading a magazine, roll 1CD. If you roll an Effect, you may use that bonus one additional time."
+                "description": "After you use the bonus gained from reading a magazine, roll 1 CD. If you roll an Effect, you may use that bonus one additional time."
             },
             {
                 "name": "Concentrated Fire",
@@ -591,7 +591,7 @@
                         "AGI": 6
                     }]
                 }],
-                "description": "When you make a ranged attack and spend ammunition to increase the damage, you may re-roll up to 3CD for your damage roll."
+                "description": "When you make a ranged attack and spend ammunition to increase the damage, you may re-roll up to 3 CD for your damage roll."
             },
             {
                 "name": "Daring Nature",
@@ -605,283 +605,342 @@
                 "description": "Whenever you attempt a skill test, and you buy one or more d20s by giving the gamemaster Action Points, you may re-roll 1d20 on that test. You may not purchase this perk if you have Cautious Nature."
             },
             {
-                "name": "",
-                "ranks": ,
+                "name": "Demolition Expert",
+                "ranks": 1,
                 "requirements": [{
-                    "levels": ,
-                    "attributes": 
+                    "levels": null,
+                    "attributes": [{
+                        "PER": 6,
+                        "LCK": 6
+                    }]
                 }],
-                "description": ""
+                "description": "When you make an attack using a weapon with the Blast quality, the attack gains the Vicious damage effect. In addition, you unlock explosives recipes which have this perk as a requirement."
             },
             {
-                "name": "",
-                "ranks": ,
+                "name": "Dodger",
+                "ranks": 2,
                 "requirements": [{
-                    "levels": ,
-                    "attributes": 
+                    "levels": [4, 10],
+                    "attributes": [{
+                        "AGI": 6
+                    }]
                 }],
-                "description": ""
+                "description": "At rank 1, when you take the Defend major action, you reduce the difficulty of the skill test by 1. At rank 2, the AP cost to further increase your Defense is reduced to 1 AP. Each time you take this perk, the level requirement increases by 6."
             },
             {
-                "name": "",
-                "ranks": ,
+                "name": "Dogmeat",
+                "ranks": 1,
                 "requirements": [{
-                    "levels": ,
-                    "attributes": 
+                    "levels": null,
+                    "attributes": [{
+                        "CHA": 5
+                    }]
                 }],
-                "description": ""
+                "description": "You aren’t alone in the wilderness. You have a pet dog that serves as a friend and ally in dangerous times. The dog has the profile shown to the side and is treated as an allied NPC creature under your command (see p.338). If you need to forage for food and water, your dog looks after themselves. If your dog is slain, then you either find a new dog before the next adventure, or you may trade this perk for a different one after this adventure."
             },
             {
-                "name": "",
-                "ranks": ,
+                "name": "Entomologist",
+                "ranks": 1,
                 "requirements": [{
-                    "levels": ,
-                    "attributes": 
+                    "levels": null,
+                    "attributes": [{
+                        "INT": 7
+                    }]
                 }],
-                "description": ""
+                "description": "When you make an attack against an NPC with the Insect keyword, your attack gains the Piercing 1 damage effect, or improves the rating of any Piercing X effect the weapon has by +1."
             },
             {
-                "name": "",
-                "ranks": ,
+                "name": "Fast Metabolism",
+                "ranks": 3,
                 "requirements": [{
-                    "levels": ,
-                    "attributes": 
+                    "levels": [1, 4, 7],
+                    "attributes": [{
+                        "END": 6
+                    }],
+                    "isRobot": false
                 }],
-                "description": ""
+                "description": "When you regain one or more HP from any source other than rest, increase the total HP regained by +1 per rank in this perk. Each time you take this perk, the level requirement increases by 3."
             },
             {
-                "name": "",
-                "ranks": ,
+                "name": "Faster Healing",
+                "ranks": 1,
                 "requirements": [{
-                    "levels": ,
-                    "attributes": 
+                    "levels": null,
+                    "attributes": [{
+                        "END": 6
+                    }],
+                    "isRobot": false
                 }],
-                "description": ""
+                "description": "When you make an END + Survival test to heal your own injuries, the first additional d20 you buy is free. The normal maximum of 5d20 still applies."
             },
             {
-                "name": "",
-                "ranks": ,
+                "name": "Finesse",
+                "ranks": 1,
                 "requirements": [{
-                    "levels": ,
-                    "attributes": 
+                    "levels": null,
+                    "attributes": [{
+                        "AGI": 9
+                    }]
                 }],
-                "description": ""
+                "description": "Once per combat encounter, you may re-roll all the CD on a single damage roll without spending any Luck points."
             },
             {
-                "name": "",
-                "ranks": ,
+                "name": "Fortune Finder",
+                "ranks": 3,
                 "requirements": [{
-                    "levels": ,
-                    "attributes": 
+                    "levels": [2, 6, 10],
+                    "attributes": [{
+                        "LCK": 5
+                    }]
                 }],
-                "description": ""
+                "description": "Whenever you roll to determine how much money you find, you find more. At rank 1, you find +3 CD additional caps. At rank 2, you find +6 CD  additional caps. At rank 3, you find +10 CD additional caps. Each time you take this perk, the level requirement increases by 4."
             },
             {
-                "name": "",
-                "ranks": ,
+                "name": "Ghost",
+                "ranks": 1,
                 "requirements": [{
-                    "levels": ,
-                    "attributes": 
+                    "levels": null,
+                    "attributes": [{
+                        "PER": 5,
+                        "AGI": 6
+                    }]
                 }],
-                "description": ""
+                "description": "Whenever you attempt an AGI + Sneak test in shadows or darkness, the first additional d20 you buy is free. The normal maximum of 5d20 still applies."
             },
             {
-                "name": "",
-                "ranks": ,
+                "name": "Grim Reaper's Sprint",
+                "ranks": 1,
                 "requirements": [{
-                    "levels": ,
-                    "attributes": 
+                    "levels": null,
+                    "attributes": [{
+                        "LCK": 8
+                    }]
                 }],
-                "description": ""
+                "description": "When you make an attack which kills one or more enemies, roll 1 CD  . If you roll an Effect, add 2 AP to the group’s pool."
             },
             {
-                "name": "",
-                "ranks": ,
+                "name": "Gun Fu",
+                "ranks": 3,
                 "requirements": [{
-                    "levels": ,
-                    "attributes": 
+                    "levels": [1, 6, 11],
+                    "attributes": [{
+                        "AGI": 10
+                    }]
                 }],
-                "description": ""
+                "description": "When you succeed at a ranged attack, you may spend 1 AP and 1 ammo to hit a second target within Close range of your initial target. The second target takes the same damage as the initial target. At rank 2, you may spend 2 AP and 2 ammo to hit two additional targets. At rank 3, you may spend 3 AP and 3 ammo to hit three additional targets. Each time you take this perk, the level requirement increases by 5."
             },
             {
-                "name": "",
-                "ranks": ,
+                "name": "Gun Nut",
+                "ranks": 4,
                 "requirements": [{
-                    "levels": ,
-                    "attributes": 
+                    "levels": [2, 6, 10, 14],
+                    "attributes": [{
+                        "INT": 6
+                    }]
                 }],
-                "description": ""
+                "description": "You can modify small guns and heavy weapons with weapon mods. Each rank in this perk unlocks an additional rank of weapon mods: rank 1 unlocks rank 1 mods, rank 2 unlocks rank 2 mods, etc. Each time you take this perk, the level requirement increases by 4."
             },
             {
-                "name": "",
-                "ranks": ,
+                "name": "Gunslinger",
+                "ranks": 2,
                 "requirements": [{
-                    "levels": ,
-                    "attributes": 
+                    "levels": [2, 6],
+                    "attributes": [{
+                        "AGI": 7
+                    }]
                 }],
-                "description": ""
+                "description": "When you make an attack with a onehanded ranged weapon with a Fire Rate of 2 or lower, you increase the weapon’s damage by +1 CD per rank. In addition, you may re-roll the hit location die. Each time you take this perk, the level requirement increases by 4."
             },
             {
-                "name": "",
-                "ranks": ,
+                "name": "Hacker",
+                "ranks": 1,
                 "requirements": [{
-                    "levels": ,
-                    "attributes": 
+                    "levels": null,
+                    "attributes": [{
+                        "INT": 8
+                    }]
                 }],
-                "description": ""
+                "description": "The difficulty of skill tests to hack computers is decreased by 1, to a minimum of 0."
             },
             {
-                "name": "",
-                "ranks": ,
+                "name": "Healer",
+                "ranks": 3,
                 "requirements": [{
-                    "levels": ,
-                    "attributes": 
+                    "levels": [1, 6, 11],
+                    "attributes": [{
+                        "INT": 7
+                    }]
                 }],
-                "description": ""
+                "description": "When you heal a patient’s HP using the First Aid action, increase the amount of HP healed by +1 per rank in this perk. Each time you take this perk, the level requirement increases by 5."
             },
             {
-                "name": "",
-                "ranks": ,
+                "name": "Heave Ho!",
+                "ranks": 1,
                 "requirements": [{
-                    "levels": ,
-                    "attributes": 
+                    "levels": null,
+                    "attributes": [{
+                        "STR 8"
+                    }]
                 }],
-                "description": ""
+                "description": "When you make a thrown weapon attack, you may spend 1 AP to increase the Range of the weapon by one step—from Close to Medium, or from Medium to Long."
             },
             {
-                "name": "",
-                "ranks": ,
+                "name": "Hunter",
+                "ranks": 1,
                 "requirements": [{
-                    "levels": ,
-                    "attributes": 
+                    "levels": null,
+                    "attributes": [{
+                        "END": 6
+                    }]
                 }],
-                "description": ""
+                "description": "When you make an attack against an NPC with one of the Mammal, Lizard, or Insect keywords and the Mutated keyword, your attack gains the Vicious damage effect, if it did not already have that effect."
             },
             {
-                "name": "",
-                "ranks": ,
+                "name": "Infiltrator",
+                "ranks": 1,
                 "requirements": [{
-                    "levels": ,
-                    "attributes": 
+                    "levels": null,
+                    "attributes": [{
+                        "PER": 8
+                    }]
                 }],
-                "description": ""
+                "description": "When you attempt a Lockpick skill test to unlock a door or container, you may re-roll 1d20."
             },
             {
-                "name": "",
-                "ranks": ,
+                "name": "Inspirational",
+                "ranks": 1,
                 "requirements": [{
-                    "levels": ,
-                    "attributes": 
+                    "levels": null,
+                    "attributes": [{
+                        "CHA": 8
+                    }]
                 }],
-                "description": ""
+                "description": "Because you lead by example, the maximum number of AP the group may save is increased by 1."
             },
             {
-                "name": "",
-                "ranks": ,
+                "name": "Intense Training",
+                "ranks": 10,
                 "requirements": [{
-                    "levels": ,
-                    "attributes": 
+                    "levels": [2, 4, 6, 8, 10, 12, 14, 16, 18, 20],
+                    "attributes": null
                 }],
-                "description": ""
+                "description": "Increase any one S.P.E.C.I.A.L attribute by 1 rank. As usual, your S.P.E.C.I.A.L attributes cannot be increased beyond 10 using this method. Each time you take this perk, the level requirement increases by 2."
             },
             {
-                "name": "",
-                "ranks": ,
+                "name": "Iron Fist",
+                "ranks": 2,
                 "requirements": [{
-                    "levels": ,
-                    "attributes": 
+                    "levels": [1, 6],
+                    "attributes": [{
+                        "STR": 6
+                    }]
                 }],
-                "description": ""
+                "description": "At rank 1, your unarmed attacks inflict +1 CD damage. At rank 2, your unarmed attacks also gain the Vicious damage effect. Each time you take this perk, the level requirement increases by 5."
             },
             {
-                "name": "",
-                "ranks": ,
+                "name": "Junktown Jerky Vendor",
+                "ranks": 1,
                 "requirements": [{
-                    "levels": ,
-                    "attributes": 
+                    "levels": null,
+                    "attributes": [{
+                        "CHA": 8
+                    }]
                 }],
-                "description": ""
+                "description": "The difficulty of any CHA + Barter test you attempt to buy or sell goods is reduced by 1, to a minimum of 0."
             },
             {
-                "name": "",
-                "ranks": ,
+                "name": "Jury Rigging",
+                "ranks": 1,
                 "requirements": [{
-                    "levels": ,
-                    "attributes": 
+                    "levels": null,
+                    "attributes": null
                 }],
-                "description": ""
+                "description": "You can repair an item without needing to expend any components. However, the repair is temporary, and the item will break again on the next complication you suffer while using it. The complication range of all skill tests to use the item increases by 1, to the roll of a 19–20."
             },
             {
-                "name": "",
-                "ranks": ,
+                "name": "Laser Commander",
+                "ranks": 2,
                 "requirements": [{
-                    "levels": ,
-                    "attributes": 
+                    "levels": [2, 6],
+                    "attributes": [{
+                        "PER": 8
+                    }]
                 }],
-                "description": ""
+                "description": "When you make an attack with a ranged energy weapon, the damage is increased by +1 CD per rank in this perk. Each time you take this perk, the level requirement increases by 4."
             },
             {
-                "name": "",
-                "ranks": ,
+                "name": "Lead Belly",
+                "ranks": 2,
                 "requirements": [{
-                    "levels": ,
-                    "attributes": 
+                    "levels": [1, 5],
+                    "attributes": [{
+                        "END": 6
+                    }]
                 }],
-                "description": ""
+                "description": "At rank 1, you may re-roll the CD  to determine if you suffer radiation damage from irradiated food or drink. At rank 2, you are immune to radiation damage from consuming irradiated food or drink. Each time you take this perk, the level requirement increases by 4."
             },
             {
-                "name": "",
-                "ranks": ,
+                "name": "Life Giver",
+                "ranks": 5,
                 "requirements": [{
-                    "levels": ,
-                    "attributes": 
+                    "levels": [5, 10, 15, 20, 25],
+                    "attributes": null
                 }],
-                "description": ""
+                "description": "Increase your maximum health points by your Endurance rank. Each time you take this perk, the level requirement increases by 5."
             },
             {
-                "name": "",
-                "ranks": ,
+                "name": "Light Step",
+                "ranks": 1,
                 "requirements": [{
-                    "levels": ,
-                    "attributes": 
+                    "levels": null,
+                    "attributes": null
                 }],
-                "description": ""
+                "description": "When you roll to generate any complications on an Agility-based skill test, you may ignore one complication for every 1 AP spent. In addition, you may re-roll 1d20 on any AGI + Athletics test to avoid traps triggered by pressure plates or similar mechanisms."
             },
             {
-                "name": "",
-                "ranks": ,
+                "name": "Master Thief",
+                "ranks": 1,
                 "requirements": [{
-                    "levels": ,
-                    "attributes": 
+                    "levels": null,
+                    "attributes": [{
+                        "PER": 8,
+                        "AGI": 9
+                    }]
                 }],
-                "description": ""
+                "description": "When you are attempting to pick a lock or pickpocket somebody, the difficulty of the opponent’s skill test to detect you increases by +1"
             },
             {
-                "name": "",
-                "ranks": ,
+                "name": "Medic",
+                "ranks": 1,
                 "requirements": [{
-                    "levels": ,
-                    "attributes": 
+                    "levels": null,
+                    "attributes": [{
+                        "INT": 8
+                    }]
                 }],
-                "description": ""
+                "description": "When you use the First Aid action to try to treat an injury, you can re-roll 1d20."
             },
             {
-                "name": "",
-                "ranks": ,
+                "name": "Meltdown",
+                "ranks": 1,
                 "requirements": [{
-                    "levels": ,
-                    "attributes": 
+                    "levels": null,
+                    "attributes": [{
+                        "PER": 10
+                    }]
                 }],
-                "description": ""
+                "description": "When you kill an enemy with an energy weapon, they explode. Roll a number of CD equal to half the weapon’s damage rating (round down). For each Effect rolled, one creature within Close range of the exploding enemy (starting with the closest) suffers energy damage equal to the total rolled on the CD."
             },
             {
-                "name": "",
-                "ranks": ,
+                "name": "Mister Sandman",
+                "ranks": 1,
                 "requirements": [{
-                    "levels": ,
-                    "attributes": 
+                    "levels": null,
+                    "attributes": [{
+                        "AGI": 9
+                    }]
                 }],
-                "description": ""
+                "description": "When you make a sneak attack with a silenced or suppressed weapon, the damage is increased by +2 CD. You cannot gain this benefit while in Power Armor."
             },
             {
                 "name": "",
