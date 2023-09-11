@@ -38,7 +38,7 @@ def main():
                     editChar(fileName)
             case '2':
                 fileName = listChar()
-                if fileName != 0:
+                if fileName != None: #listChar has not returned anything if "Back" was selected
                     listChoice = '0'
                     while listChoice != '3':
                         printDelay('Would you like to view or edit ' + fileName + '?')
@@ -111,6 +111,7 @@ def generateChar():
         printDelay('Whoops, something went wrong. Make sure the template.json file is still located in the same directory as this program.')
         return 0        
 
+#listChar() prints out all of the saved characters to select from, and allows the user to select one
 def listChar():
     charList = os.listdir('characters')
     editChoice = '0'
@@ -123,7 +124,7 @@ def listChar():
         printDelay(str(i + 1) + '. Back')
         printDelay('Enter the corresponding number: ', False)
         editChoice = input()
-        if editChoice != str(len(charList) + 1):
+        if editChoice != str(len(charList) + 1): #if the user selects "Back," nothing is returned
             try:
                 editChoice = int(editChoice)
                 printDelay('You have selected ' + str(editChoice) + '. ' + charList[editChoice - 1])
