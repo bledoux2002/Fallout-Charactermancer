@@ -1,14 +1,14 @@
 {
-    "name": null,
+    "name": "",
     "level": 1,
     "ap": 0,
     "xp": 0,
     "health": 10,
     "isRobot": false,
     "isNPC": false,
-    "origin": null,
-    "traits": null,
-    "equipmentPack": null,
+    "origin": "",
+    "traits": "",
+    "equipmentPack": "",
     "attributes": [{
         "STR": 5,
         "PER": 5,

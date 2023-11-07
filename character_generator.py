@@ -14,7 +14,7 @@ from time import sleep
 
 # Initialize program with saved settings from JSON file
 textSpeed = 0 #may not be necessary but could be useful in case setting.json doesn't work
-with open('settings.json', 'r') as settingsFile:
+with open('settings.json', 'r', encoding='utf-8') as settingsFile:
     settingsData = json.load(settingsFile)
     textSpeed = settingsData['tSpeed']
 
@@ -49,9 +49,7 @@ def main():
                         listChoice = input()
                         match listChoice:
                             case '1':
-                                with open(f'characters\\{fileName}', 'r') as charFile:
-                                    charData = json.load(charFile)
-                                    printDelay(json.dumps(charData, indent=1)) #will be replaced by printChar() function that tidies up the json data, only if user selects view instead of edit
+                                printChar(fileName)
                             case '2':
                                 editChar(fileName)
                             case '3':
@@ -101,9 +99,9 @@ def generateChar():
     
     # Create copy of template.json w/ new fileName
     try:
-        with open('template.json', 'r') as templateFile:
+        with open('template.json', 'r', encoding='utf-8') as templateFile:
             testChar = json.load(templateFile)
-            with open(f'characters\\{fileName}', 'w') as charFile:
+            with open(f'characters\\{fileName}', 'w', encoding='utf-8') as charFile:
                 json.dump(testChar, charFile, indent=4)
         printDelay(f'Successfully copied template to {fileName}')
         return fileName
@@ -134,7 +132,61 @@ def listChar():
 
 #editChar() takes json filename as input, opens file as write file, presents menu listing contents of character sheet to edit
 def editChar(file):
-    printDelay('PSYCH! Coming soon tho...')
+    #Maybe use length of dict to print out character editting options? should always be the same for this first menu so won't bother, but could be useful for listing assigned perks, equipment, etc.
+    editChoice = '0'
+    while editChoice != '16':
+        printDelay('Select what you would like to change:') #For now, functional options overwrite original values, so to add a last name one would write out the entire name in the input
+        charData = printChar(file)
+        printDelay('16. Back')
+        printDelay('Enter corresponding number: ', False)
+        editChoice = input()
+        match editChoice:
+            case '1':
+                printDelay('New name: ', False)
+                charData['name'] = input()
+            case '2':
+                printDelay('New level: ', False)
+                charData['level'] = int(input())
+            case '3':
+                printDelay('New action points: ', False)
+                charData['ap'] = int(input())
+            case '4':
+                printDelay('New experience points: ', False)
+                charData['xp'] = int(input())
+            case '5':
+                printDelay('New health points: ', False)
+                charData['health'] = int(input())
+            case '6':
+                printDelay('isRobot (True/False): ', False)
+                charData['isRobot'] = bool(input())
+            case '7':
+                printDelay('isNPC (True/False): ', False)
+                charData['isNPC'] = bool(input())
+            case '8':
+                printDelay('New origin: ', False)
+                charData['origin'] = input()
+            case '9':
+                printDelay('Trait(s): ', False)
+                charData['traits'] = input()
+            case '10':
+                printDelay('New equipment pack: ', False)
+                charData['equipmentPack'] = input()
+            case '11':
+                printDelay('PSYCH! Coming soon tho...')
+            case '12':
+                printDelay('PSYCH! Coming soon tho...')
+            case '13':
+                printDelay('PSYCH! Coming soon tho...')
+            case '14':
+                printDelay('PSYCH! Coming soon tho...')
+            case '15':
+                printDelay('PSYCH! Coming soon tho...')
+            case '16':
+                pass
+            case _:
+                printDelay('Entry invalid, try again.')
+    with open(f'characters\\{file}', 'w', encoding='utf-8') as charFile:
+        json.dump(charData, charFile, indent=4)
 
 ''' probably not necessary since file upload/download will likely have to be manual. could be implemented in future for website or unity app integration
 #uploadChar() registers a character file from the user inputted name, afetr the file has been dropped into the program folder 
@@ -143,6 +195,27 @@ def uploadChar():
     charFile = input() + '.json'
     printDelay('Uploading ' + charFile + '...')
 '''
+
+#printChar() takes a file name to print out the contents of and returns the data variable for use
+def printChar(file):
+    with open(f'characters\\{file}', 'r', encoding='utf-8') as charFile:
+        charData = json.load(charFile)
+    printDelay('1. Name: ' + charData['name'])
+    printDelay('2. Level: ' + str(charData['level']))
+    printDelay('3. Action Points: ' + str(charData['ap']))
+    printDelay('4. Experience Points: ' + str(charData['xp']))
+    printDelay('5. Health Points: ' + str(charData['health']))
+    printDelay('6. isRobot: ' + str(charData['isRobot'])) #keep for now, will try to automate with backgrounds but manual assignment is needed for homebrew
+    printDelay('7. isNPC: ' + str(charData['isNPC']))
+    printDelay('8. Origin: ' + charData['origin'])
+    printDelay('9. Traits: ' + charData['traits'])
+    printDelay('10. Equipment Pack: ' + charData['equipmentPack'])
+    printDelay('11. S.P.E.C.I.A.L.')
+    printDelay('12. Skills')
+    printDelay('13. Perks')
+    printDelay('14. Stats')
+    printDelay('15. Inventory')
+    return charData
 
 #settings() will present another menu for different elements of the program to change, such as text speed
 def settings():
@@ -189,10 +262,10 @@ def settings():
                             printDelay('Text speed is now Instant.')
                         case _:
                             printDelay('Entry invalid, try again.')
-                with open('settings.json', 'r') as setFile:
+                with open('settings.json', 'r', encoding='utf-8') as setFile:
                     settingsData = json.load(setFile)
                 settingsData['tSpeed'] = textSpeed
-                with open('settings.json', 'w') as setFile:
+                with open('settings.json', 'w', encoding='utf-8') as setFile:
                     json.dump(settingsData, setFile, indent=4)
                 print(textSpeed)
             case '2':
