@@ -22,14 +22,13 @@ def main():
     printDelay('Welcome to the Fallout Tabletop Roleplaying Game Character Creator!')
     #While quit has not been selected, present main menu, take input, then execute appropriate code
     mainChoice = '0'
-    while mainChoice != '5':
+    while mainChoice != 'q':
         printDelay('Please select one of the options from the menu below:')
-        printDelay('1. Create a new character')
-        printDelay('2. View or edit a saved characters')
-        printDelay('3. Create a copy of a character file')
-        printDelay('4. Options')
-        printDelay('5. Quit')
-        printDelay('Enter the corresponding number: ', False)
+        printDelay('1. New character')
+        printDelay('2. Saved characters')
+        printDelay('3. Options')
+        printDelay('q. Quit')
+        printDelay('Entry: ', False)
         mainChoice = input()
         match mainChoice:
             case '1':
@@ -44,8 +43,10 @@ def main():
                         printDelay('Would you like to view or edit ' + fileName + '?')
                         printDelay('1. View')
                         printDelay('2. Edit')
-                        printDelay('3. Back')
-                        printDelay('Enter the corresponding number: ', False)
+                        printDelay('3. Duplicate')
+                        printDelay('4. Delete')
+                        printDelay('q. Back')
+                        printDelay('Entry: ', False)
                         listChoice = input()
                         match listChoice:
                             case '1':
@@ -53,16 +54,18 @@ def main():
                             case '2':
                                 editChar(fileName)
                             case '3':
+                                #create copy of fileName, give new file name
+                                printDelay('PSYCH! Coming soon tho...')
+                            case '4':
+                                #delete character file
+                                printDelay('PSYCH! Coming soon tho...')
+                            case 'q':
                                 pass
                             case _:
                                 printDelay('Entry invalid, try again.')
             case '3':
-                #copyChar()
-                printDelay('PSYCH! Coming soon tho...')
-            case '4':
                 settings()
-                print(textSpeed)
-            case '5':
+            case 'q':
                 pass
             case _:
                 printDelay('Entry invalid, try again.')
@@ -81,7 +84,7 @@ def printDelay(str, newLine=True, speed=-1): #if using unique speed, have to dec
     if newLine:
         print('')
 
-#generateChar() takes creates a copy of template.json to be an edittable character file
+#generateChar() takes creates a copy of template.json to be an edittable character file, will change to have default input for template.json, can be changed for duplicateChar
 def generateChar():
     printDelay('Please enter a file name (without file type extension): ', False)
     fileName = input()
@@ -113,16 +116,16 @@ def generateChar():
 def listChar():
     charList = os.listdir('characters')
     editChoice = '0'
-    while editChoice != str(len(charList) + 1):
+    while editChoice != 'q':
         printDelay('Here are your currently saved characters: ')
         i = 0
         while i < len(charList):
             printDelay(str(i + 1) + '. ' + charList[i])
             i += 1
-        printDelay(str(i + 1) + '. Back')
-        printDelay('Enter the corresponding number: ', False)
+        printDelay('q. Back')
+        printDelay('Entry: ', False)
         editChoice = input()
-        if editChoice != str(len(charList) + 1): #if the user selects "Back," nothing is returned
+        if editChoice != 'q': #if the user selects "Back," nothing is returned
             try:
                 editChoice = int(editChoice)
                 printDelay('You have selected ' + str(editChoice) + '. ' + charList[editChoice - 1])
@@ -134,11 +137,11 @@ def listChar():
 def editChar(file):
     #Maybe use length of dict to print out character editting options? should always be the same for this first menu so won't bother, but could be useful for listing assigned perks, equipment, etc.
     editChoice = '0'
-    while editChoice != '16':
+    while editChoice != 'q':
         printDelay('Select what you would like to change:') #For now, functional options overwrite original values, so to add a last name one would write out the entire name in the input
         charData = printChar(file)
-        printDelay('16. Back')
-        printDelay('Enter the corresponding number: ', False)
+        printDelay('q. Back')
+        printDelay('Entry: ', False)
         editChoice = input()
         match editChoice:
             case '1':
@@ -189,19 +192,26 @@ def editChar(file):
                     specChoice = input()
                     match specChoice:
                         case '1':
-                            printDelay('PSYCH! Coming soon tho...')
+                            printDelay('Strength: ', False)
+                            charData['attributes']['STR'] = int(input())
                         case '2':
-                            printDelay('PSYCH! Coming soon tho...')
+                            printDelay('Pereption: ', False)
+                            charData['attributes']['PER'] = int(input())
                         case '3':
-                            printDelay('PSYCH! Coming soon tho...')
+                            printDelay('Endurance: ', False)
+                            charData['attributes']['END'] = int(input())
                         case '4':
-                            printDelay('PSYCH! Coming soon tho...')
+                            printDelay('Charisma: ', False)
+                            charData['attributes']['CHA'] = int(input())
                         case '5':
-                            printDelay('PSYCH! Coming soon tho...')
+                            printDelay('Intelligence: ', False)
+                            charData['attributes']['INT'] = int(input())
                         case '6':
-                            printDelay('PSYCH! Coming soon tho...')
+                            printDelay('Agility: ', False)
+                            charData['attributes']['AGI'] = int(input())
                         case '7':
-                            printDelay('PSYCH! Coming soon tho...')
+                            printDelay('Luck: ', False)
+                            charData['attributes']['LCK'] = int(input())
                         case '8':
                             pass
                         case _:
@@ -214,12 +224,23 @@ def editChar(file):
                 printDelay('PSYCH! Coming soon tho...')
             case '15':
                 printDelay('PSYCH! Coming soon tho...')
-            case '16':
-                pass
+            case 'q':
+                saveChoice = '0'
+                while saveChoice != 'n':
+                    printDelay('Save changes? (y/n) ', False)
+                    saveChoice = input()
+                    match saveChoice:
+                        case 'y':
+                            with open(f'characters\\{file}', 'w', encoding='utf-8') as charFile:
+                                json.dump(charData, charFile, indent=4)
+                            printDelay('Changes saved')
+                        case 'n':
+                            printDelay('Changes discarded')
+                        case _:
+                            printDelay('Entry invalid, try again.')
             case _:
                 printDelay('Entry invalid, try again.')
-    with open(f'characters\\{file}', 'w', encoding='utf-8') as charFile:
-        json.dump(charData, charFile, indent=4)
+    
 
 ''' probably not necessary since file upload/download will likely have to be manual. could be implemented in future for website or unity app integration
 #uploadChar() registers a character file from the user inputted name, afetr the file has been dropped into the program folder 
@@ -243,7 +264,7 @@ def printChar(file):
     printDelay('8. Origin: ' + charData['origin'])
     printDelay('9. Traits: ' + charData['traits'])
     printDelay('10. Equipment Pack: ' + charData['equipmentPack'])
-    printDelay('11. S.P.E.C.I.A.L.')
+    printDelay('11. ' + str(charData['attributes'])) #looks terrible but code is so much simpler. will go back and revamp but for now im lazy
     printDelay('12. Skills')
     printDelay('13. Perks')
     printDelay('14. Stats')
@@ -254,10 +275,10 @@ def printChar(file):
 def settings():
     global textSpeed
     setChoice = '0'
-    while setChoice != '2':
+    while setChoice != 'q':
         printDelay('Please select one of the options from the menu below:')
         printDelay('1. Text speed')
-        printDelay('2. Back')
+        printDelay('q. Back')
         printDelay('Enter the corresponding number: ', False)
         setChoice = input()
         match setChoice:
@@ -301,7 +322,7 @@ def settings():
                 with open('settings.json', 'w', encoding='utf-8') as setFile:
                     json.dump(settingsData, setFile, indent=4)
                 print(textSpeed)
-            case '2':
+            case 'q':
                 pass
             case _:
                 printDelay('Entry invalid, try again.')
