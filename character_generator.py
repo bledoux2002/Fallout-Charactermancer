@@ -1,4 +1,4 @@
-# Character Creator for the Fallout 2d20 Tabletop Roleplaying system by Modiphius Entertainment
+4# Character Creator for the Fallout 2d20 Tabletop Roleplaying system by Modiphius Entertainment
 # Created by Benjamin Ledoux using the Core Rulebook February 2023 edition.
 # First created 5/27/2023 1848, last editted 7/13/2023 1139
 
@@ -29,7 +29,7 @@ def main():
         printDelay('3. Create a copy of a character file')
         printDelay('4. Options')
         printDelay('5. Quit')
-        printDelay('Enter corresponding number: ', False)
+        printDelay('Enter the corresponding number: ', False)
         mainChoice = input()
         match mainChoice:
             case '1':
@@ -45,7 +45,7 @@ def main():
                         printDelay('1. View')
                         printDelay('2. Edit')
                         printDelay('3. Back')
-                        printDelay('Enter corresponding number: ', False)
+                        printDelay('Enter the corresponding number: ', False)
                         listChoice = input()
                         match listChoice:
                             case '1':
@@ -138,7 +138,7 @@ def editChar(file):
         printDelay('Select what you would like to change:') #For now, functional options overwrite original values, so to add a last name one would write out the entire name in the input
         charData = printChar(file)
         printDelay('16. Back')
-        printDelay('Enter corresponding number: ', False)
+        printDelay('Enter the corresponding number: ', False)
         editChoice = input()
         match editChoice:
             case '1':
@@ -172,7 +172,40 @@ def editChar(file):
                 printDelay('New equipment pack: ', False)
                 charData['equipmentPack'] = input()
             case '11':
-                printDelay('PSYCH! Coming soon tho...')
+                specChoice = '0'
+                while specChoice != '8':
+                    printDelay('Which S.P.E.C.I.A.L. stat would you like to change?')
+#                    for i in range(len(charData['attributes'])):
+#                        printDelay(str(i + 1) + '. ' + str(charData['attributes'][i]))
+                    printDelay('1. Strength')
+                    printDelay('2. Perception')
+                    printDelay('3. Endurance')
+                    printDelay('4. Charisma')
+                    printDelay('5. Intelligence')
+                    printDelay('6. Agility')
+                    printDelay('7. Luck')
+                    printDelay('8. Back')
+                    printDelay('Enter the corresponding number: ', False)
+                    specChoice = input()
+                    match specChoice:
+                        case '1':
+                            printDelay('PSYCH! Coming soon tho...')
+                        case '2':
+                            printDelay('PSYCH! Coming soon tho...')
+                        case '3':
+                            printDelay('PSYCH! Coming soon tho...')
+                        case '4':
+                            printDelay('PSYCH! Coming soon tho...')
+                        case '5':
+                            printDelay('PSYCH! Coming soon tho...')
+                        case '6':
+                            printDelay('PSYCH! Coming soon tho...')
+                        case '7':
+                            printDelay('PSYCH! Coming soon tho...')
+                        case '8':
+                            pass
+                        case _:
+                            printDelay('Entry invalid, try again.')
             case '12':
                 printDelay('PSYCH! Coming soon tho...')
             case '13':
