@@ -655,6 +655,16 @@
                 }]
             }],
             "description": "When you make a sneak attack with a silenced or suppressed weapon, the damage is increased by +2 CD. You cannot gain this benefit while in Power Armor."
+        },
+        "Moving Target": {
+            "ranks": 1,
+            "requirements": [{
+                "levels": null,
+                "attributes": [{
+                    "AGI": 6
+                }]
+            }],
+            "description": "When you take the Sprint action, your Defense increases by +1 until the start of your next turn."
         }
     },
     "equipment": [{
