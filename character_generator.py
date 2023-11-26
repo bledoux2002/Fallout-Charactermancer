@@ -39,8 +39,8 @@ def main():
                 fileName = listChar()
                 if fileName != None: #listChar has not returned anything if "Back" was selected
                     listChoice = '0'
-                    while listChoice != '3':
-                        printDelay('Would you like to view or edit ' + fileName + '?')
+                    while listChoice != 'q':
+                        printDelay(f'What would you like to do with {fileName} ?')
                         printDelay('1. View')
                         printDelay('2. Edit')
                         printDelay('3. Duplicate')
@@ -54,11 +54,24 @@ def main():
                             case '2':
                                 editChar(fileName)
                             case '3':
-                                #create copy of fileName, give new file name
-                                printDelay('PSYCH! Coming soon tho...')
+                                newFile = generateChar(f'characters\\{fileName}') #creates new character file using template.json, returns fileName including .json 
+                                if newFile != 0:
+                                    editChar(newFile)
                             case '4':
-                                #delete character file
-                                printDelay('PSYCH! Coming soon tho...')
+                                delChoice = None
+                                while delChoice == None:
+                                    printDelay(f'Are you sure you want to delete {fileName}? (y/n) ', False)
+                                    delChoice = input()
+                                    match delChoice:
+                                        case 'y':
+                                            os.remove(f'characters\\{fileName}')
+                                            printDelay(f'{fileName} removed')
+                                            listChoice = 'q'
+                                        case 'n':
+                                            printDelay('Operation cancelled')
+                                        case _:
+                                            printDelay('Entry invalid, try again.')
+                                            delChoice = None
                             case 'q':
                                 pass
                             case _:
@@ -85,7 +98,7 @@ def printDelay(str, newLine=True, speed=-1): #if using unique speed, have to dec
         print('')
 
 #generateChar() takes creates a copy of template.json to be an edittable character file, will change to have default input for template.json, can be changed for duplicateChar
-def generateChar():
+def generateChar(baseFile = 'template.json'):
     printDelay('Please enter a file name (without file type extension): ', False)
     fileName = input()
     printDelay('Generating new character...') #not necessary, only slows program down, but who doesn't love a little showmanship
@@ -100,17 +113,17 @@ def generateChar():
     fileName += '.json'
     printDelay(f'Your character\'s file name (with extension) is {fileName}')
     
-    # Create copy of template.json w/ new fileName
+    # Create copy of baseFile w/ new fileName
     try:
-        with open('template.json', 'r', encoding='utf-8') as templateFile:
+        with open(baseFile, 'r', encoding='utf-8') as templateFile:
             testChar = json.load(templateFile)
             with open(f'characters\\{fileName}', 'w', encoding='utf-8') as charFile:
                 json.dump(testChar, charFile, indent=4)
-        printDelay(f'Successfully copied template to {fileName}')
+        printDelay(f'Successfully copied {baseFile} to {fileName}')
         return fileName
     except:
-        printDelay('Whoops, something went wrong. Make sure the template.json file is still located in the same directory as this program.')
-        return 0        
+        printDelay(f'Whoops, something went wrong. Make sure {baseFile} file is still located in the same directory as this program.')
+        return 0
 
 #listChar() prints out all of the saved characters to select from, and allows the user to select one
 def listChar():
@@ -176,7 +189,7 @@ def editChar(file):
                 charData['equipmentPack'] = input()
             case '11':
                 specChoice = '0'
-                while specChoice != '8':
+                while specChoice != 'q':
                     printDelay('Which S.P.E.C.I.A.L. stat would you like to change?')
 #                    for i in range(len(charData['attributes'])):
 #                        printDelay(str(i + 1) + '. ' + str(charData['attributes'][i]))
@@ -187,7 +200,7 @@ def editChar(file):
                     printDelay('5. Intelligence')
                     printDelay('6. Agility')
                     printDelay('7. Luck')
-                    printDelay('8. Back')
+                    printDelay('q. Back')
                     printDelay('Enter the corresponding number: ', False)
                     specChoice = input()
                     match specChoice:
@@ -212,7 +225,7 @@ def editChar(file):
                         case '7':
                             printDelay('Luck: ', False)
                             charData['attributes']['LCK'] = int(input())
-                        case '8':
+                        case 'q':
                             pass
                         case _:
                             printDelay('Entry invalid, try again.')
@@ -225,8 +238,9 @@ def editChar(file):
             case '15':
                 printDelay('PSYCH! Coming soon tho...')
             case 'q':
-                saveChoice = '0'
-                while saveChoice != 'n':
+                #ability to discard changes would require some sort of temporary file system to hold changes, and im too lazy to implement that (would be similar to duplicating a file, deleting old one, renaming new one)
+                '''saveChoice = None
+                while saveChoice == None:
                     printDelay('Save changes? (y/n) ', False)
                     saveChoice = input()
                     match saveChoice:
@@ -238,8 +252,13 @@ def editChar(file):
                             printDelay('Changes discarded')
                         case _:
                             printDelay('Entry invalid, try again.')
+                            saveChoice = None'''
+                pass
             case _:
                 printDelay('Entry invalid, try again.')
+        with open(f'characters\\{file}', 'w', encoding='utf-8') as charFile:
+            json.dump(charData, charFile, indent=4)
+        printDelay('Changes saved')
     
 
 ''' probably not necessary since file upload/download will likely have to be manual. could be implemented in future for website or unity app integration

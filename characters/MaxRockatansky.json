@@ -1,22 +1,22 @@
 {
-    "name": "Sergam Cescal",
+    "name": "Max Rockatansky",
     "level": 1,
     "ap": 2,
     "xp": 0,
     "health": 10,
     "isRobot": false,
     "isNPC": false,
-    "origin": "Survivor",
-    "traits": "Gifted",
+    "origin": "Vault Dweller",
+    "traits": "Vault Boy",
     "equipmentPack": "",
     "attributes": {
-        "STR": 4,
-        "PER": 8,
-        "END": 4,
-        "CHA": 5,
+        "STR": 6,
+        "PER": 5,
+        "END": 7,
+        "CHA": 6,
         "INT": 6,
-        "AGI": 8,
-        "LCK": 5
+        "AGI": 7,
+        "LCK": 2
     },
     "skills": {
         "Athletics": {
