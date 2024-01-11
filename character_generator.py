@@ -1,4 +1,4 @@
-4# Character Creator for the Fallout 2d20 Tabletop Roleplaying system by Modiphius Entertainment
+# Character Creator for the Fallout 2d20 Tabletop Roleplaying system by Modiphius Entertainment
 # Created by Benjamin Ledoux using the Core Rulebook February 2023 edition.
 # First created 5/27/2023 1848, last editted 7/13/2023 1139
 
