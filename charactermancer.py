@@ -31,7 +31,7 @@ def main():
         printDelay('3. Options')
         printDelay('q. Quit')
         printDelay('Entry: ', False)
-        mainChoice = input()
+        mainChoice = input().lower()
         match mainChoice:
             case '1':
                 fileName = generateChar() #creates new character file using template.json, returns fileName including .json 
@@ -49,7 +49,7 @@ def main():
                         printDelay('4. Delete')
                         printDelay('q. Back')
                         printDelay('Entry: ', False)
-                        listChoice = input()
+                        listChoice = input().lower()
                         match listChoice:
                             case '1':
                                 printChar(fileName)
@@ -63,7 +63,7 @@ def main():
                                 delChoice = None
                                 while delChoice == None:
                                     printDelay(f'Are you sure you want to delete {fileName}? (y/n) ', False)
-                                    delChoice = input()
+                                    delChoice = input().lower()
                                     match delChoice:
                                         case 'y':
                                             os.remove(f'characters\\{fileName}')
@@ -101,10 +101,21 @@ def printDelay(str, newLine=True, speed=-1): #if using unique speed, have to dec
 
 #generateChar() takes creates a copy of template.json to be an edittable character file, will change to have default input for template.json, can be changed for duplicateChar
 def generateChar(baseFile = 'template.json'):
-    printDelay('Please enter a file name (without file type extension): ', False)
-    fileName = input()
-    printDelay('Generating new character...') #not necessary, only slows program down, but who doesn't love a little showmanship
-    
+    invalidChars = '<>:"/\|?*'
+    printDelay('Please enter a file name (default "character"): ', False)
+    fileName = input() #NO PROTECTION FOR FILE-NAMING RULES (for non-windows machines)
+    # Remove illegal characters
+    for char in invalidChars:
+        fileName = fileName.replace(char, '')
+    # Remove illegal ending characters
+    if fileName != '': #needed in case all characters were illegal
+        while fileName[-1] == ' ' or fileName[-1] == '.':
+            fileName = fileName[:-1]
+            if fileName == '':
+                break
+    # Default filename if empty
+    if len(fileName) == 0:
+        fileName = 'character'
     # Increment filename if already in use
     if os.path.exists(f'characters\\{fileName}.json'):
         printDelay('Character already exists, incrementing file name...')
@@ -112,7 +123,9 @@ def generateChar(baseFile = 'template.json'):
         while os.path.exists(f'characters\\{fileName + str(i)}.json'):
             i += 1
         fileName += str(i)
+    # Append filetype extension
     fileName += '.json'
+
     printDelay(f'Your character\'s file name (with extension) is {fileName}')
     
     # Create copy of baseFile w/ new fileName
@@ -139,8 +152,8 @@ def listChar():
             i += 1
         printDelay('q. Back')
         printDelay('Entry: ', False)
-        editChoice = input()
-        if editChoice != 'q': #if the user selects "Back," nothing is returned
+        editChoice = input().lower()
+        while editChoice != 'q': #if the user selects "Back," nothing is returned
             try:
                 editChoice = int(editChoice)
                 printDelay('You have selected ' + str(editChoice) + '. ' + charList[editChoice - 1])
@@ -157,7 +170,7 @@ def editChar(file):
         charData = printChar(file)
         printDelay('q. Back')
         printDelay('Entry: ', False)
-        editChoice = input()
+        editChoice = input().lower()
         match editChoice:
             case '1':
                 printDelay('New name: ', False)
@@ -193,18 +206,13 @@ def editChar(file):
                 specChoice = '0'
                 while specChoice != 'q':
                     printDelay('Which S.P.E.C.I.A.L. stat would you like to change?')
-#                    for i in range(len(charData['attributes'])):
-#                        printDelay(str(i + 1) + '. ' + str(charData['attributes'][i]))
-                    printDelay('1. Strength')
-                    printDelay('2. Perception')
-                    printDelay('3. Endurance')
-                    printDelay('4. Charisma')
-                    printDelay('5. Intelligence')
-                    printDelay('6. Agility')
-                    printDelay('7. Luck')
+                    keys = list(charData['attributes'].keys())
+                    values = list(charData['attributes'].values())
+                    for i in range(len(charData['attributes'])):
+                        printDelay(str(i + 1) + '. ' + keys[i] + ' ' + str(values[i])) #why is this commented out?
                     printDelay('q. Back')
                     printDelay('Enter the corresponding number: ', False)
-                    specChoice = input()
+                    specChoice = input().lower()
                     match specChoice:
                         case '1':
                             printDelay('Strength: ', False)
@@ -261,15 +269,6 @@ def editChar(file):
         with open(f'characters\\{file}', 'w', encoding='utf-8') as charFile:
             json.dump(charData, charFile, indent=4)
         printDelay('Changes saved')
-    
-
-''' probably not necessary since file upload/download will likely have to be manual. could be implemented in future for website or unity app integration
-#uploadChar() registers a character file from the user inputted name, afetr the file has been dropped into the program folder 
-def uploadChar():
-    printDelay('Please type the name of the character file you wish to upload: ', False)
-    charFile = input() + '.json'
-    printDelay('Uploading ' + charFile + '...')
-'''
 
 #printChar() takes a file name to print out the contents of and returns the data variable for use
 def printChar(file):
@@ -285,7 +284,12 @@ def printChar(file):
     printDelay('8. Origin: ' + charData['origin'])
     printDelay('9. Traits: ' + charData['traits'])
     printDelay('10. Equipment Pack: ' + charData['equipmentPack'])
-    printDelay('11. ' + str(charData['attributes'])) #looks terrible but code is so much simpler. will go back and revamp but for now im lazy
+    attributeStr = ''
+    for key, value in (charData['attributes'].items()):
+        attributeStr += key + ' ' + str(value)
+        if (key != 'LCK'):
+            attributeStr += ', '
+    printDelay('11. ' + attributeStr) #looks terrible but code is so much simpler. will go back and revamp but for now im lazy
     printDelay('12. Skills')
     printDelay('13. Perks')
     printDelay('14. Stats')
