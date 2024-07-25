@@ -651,111 +651,111 @@
             "description": "When you take the Sprint action, your Defense increases by +1 until the start of your next turn."
         }
     },
-    "equipment": [{
-        "ammo": [{
+    "equipment": {
+        "ammo": {
 
-        }],
-        "smallGuns": [{
-            "mods": [{
+        },
+        "smallGuns": {
+            "mods": {
 
-            }]
-        }],
-        "energyWeapons": [{
-            "mods": [{
+            }
+        },
+        "energyWeapons": {
+            "mods": {
                 
-            }]
-        }],
-        "bigGuns": [{
+            }
+        },
+        "bigGuns": {
 
-        }],
-        "meleeWeapons": [{
+        },
+        "meleeWeapons": {
 
-        }],
-        "throwingWeapons": [{
+        },
+        "throwingWeapons": {
 
-        }],
-        "explosives": [{
+        },
+        "explosives": {
 
-        }],
-        "apparel": [{
-            "clothing": [{
+        },
+        "apparel": {
+            "clothing": {
 
-            }],
-            "outfits": [{
+            },
+            "outfits": {
 
-            }],
-            "headgear": [{
+            },
+            "headgear": {
 
-            }],
-            "mods": [{
+            },
+            "mods": {
 
-            }]
-        }],
-        "armor": [{
-            "raider": [{
-                "mods": [{
+            }
+        },
+        "armor": {
+            "raider": {
+                "mods": {
 
-                }]
-            }],
-            "leather": [{
-                "mods": [{
+                }
+            },
+            "leather": {
+                "mods": {
                     
-                    }]
-            }],
-            "metal": [{
-                "mods": [{
+                    }
+            },
+            "metal": {
+                "mods": {
                     
-                    }]
-            }],
-            "combat": [{
-                "mods": [{
+                    }
+            },
+            "combat": {
+                "mods": {
                     
-                    }]
-            }],
-            "synth": [{
-                "mods": [{
+                    }
+            },
+            "synth": {
+                "mods": {
                     
-                    }]
-            }],
-            "vaultTec": [{
+                    }
+            },
+            "vaultTec": {
 
-            }],
-            "mods": [{
+            },
+            "mods": {
 
-            }]
-        }],
-        "powerArmor": [{
-            "mods": [{
+            }
+        },
+        "powerArmor": {
+            "mods": {
 
-            }]
-        }],
-        "robotArmor": [{
+            }
+        },
+        "robotArmor": {
 
-        }],
-        "consumables": [{
-            "food": [{
+        },
+        "consumables": {
+            "food": {
 
-            }],
-            "drinks": [{
+            },
+            "drinks": {
 
-            }],
-            "chems": [{
+            },
+            "chems": {
 
-            }],
-            "other": [{
+            },
+            "other": {
                 
-            }]
-        }],
-        "booksAndMags": [{
+            }
+        },
+        "booksAndMags": {
 
-        }],
-        "misc": [{
-            "utlity": [{
+        },
+        "misc": {
+            "utlity": {
 
-            }],
-            "robotMods": [{
+            },
+            "robotMods": {
                 
-            }]
-        }]
-    }]
+            }
+        }
+    }
 }
