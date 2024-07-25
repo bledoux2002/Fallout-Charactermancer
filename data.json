@@ -78,9 +78,147 @@
             }
         }
     },
-    "equipmentPacks": [
-        
-    ],
+    "startingEquipment": {
+        "packs": {
+            "bos": {
+                "Brotherhood of Steel Initiate": {
+
+                },
+                "Brotherhood of Steel Scribe": {
+
+                }
+            },
+            "mrHandy": {
+                "Miss Nanny": {
+
+                },
+                "Mister Farmhand": {
+
+                },
+                "Mister Gutsy": {
+
+                },
+                "Mister Handy": {
+
+                },
+                "Nurse Handy": {
+
+                }
+            },
+            "superMutant": {
+                "Super Mutant Brute": {
+
+                },
+                "Super Mutant Skirmisher": {
+
+                }
+            },
+            "vaultDweller": {
+                "Vault-Tec Resident": {
+
+                },
+                "Vault-Tec Security": {
+
+                }
+            },
+            "wastelander": {
+                "Mercenary": {
+
+                },
+                "Raider": {
+
+                },
+                "Settler": {
+
+                },
+                "Trader": {
+
+                },
+                "Wanderer": {
+
+                }
+            }
+        },
+        "trinkets": {
+
+        },
+        "tagSkillItems": {
+            "Athletics": {
+
+            },
+            "Barter": {
+
+            },
+            "Big Guns": {
+
+            },
+            "Energy Weapons": {
+
+            },
+            "Explosives": {
+
+            },
+            "Lockpick": {
+
+            },
+            "Medicine": {
+
+            },
+            "Melee Weapons": {
+
+            },
+            "Pilot": {
+
+            },
+            "Repair": {
+
+            },
+            "Science": {
+
+            },
+            "Small Guns": {
+
+            },
+            "Sneak": {
+
+            },
+            "Speech": {
+
+            },
+            "Survival": {
+
+            },
+            "Throwing": {
+
+            },
+            "Unarmed": {
+
+            }
+            
+        },
+        "higherLevel": [
+            [100, 1],
+            [250, 1],
+            [450, 1],
+            [700, 2],
+            [1000, 2],
+            [1350, 2],
+            [1750, 2],
+            [2200, 3],
+            [2700, 3],
+            [3250, 3],
+            [3850, 3],
+            [4500, 4],
+            [5200, 4],
+            [5950, 4],
+            [6750, 4],
+            [7600, 5],
+            [8500, 5],
+            [9450, 5],
+            [10450, 5],
+            ["10450 + (level * 50)", "Any"]
+        ]
+    },
     "perks": {
         "Action Boy/Girl": {
             "ranks": 1,
