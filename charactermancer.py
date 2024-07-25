@@ -1,4 +1,4 @@
-# Character Creator for the Fallout 2d20 Tabletop Roleplaying system by Modiphius Entertainment
+# Character creation and management system for the Fallout 2d20 Tabletop Roleplaying system by Modiphius Entertainment
 # Created by Benjamin Ledoux using the Core Rulebook February 2023 edition.
 # First created 5/27/2023 1848, last editted 7/13/2023 1139
 
@@ -13,10 +13,12 @@ from time import sleep
 #printDelay('PSYCH! Coming soon tho...')
 
 # Initialize program with saved settings from JSON file
-textSpeed = 0 #may not be necessary but could be useful in case setting.json doesn't work
-with open('settings.json', 'r', encoding='utf-8') as settingsFile:
-    settingsData = json.load(settingsFile)
-    textSpeed = settingsData['tSpeed']
+try:
+    with open('settings.json', 'r', encoding='utf-8') as settingsFile:
+        settingsData = json.load(settingsFile)
+        textSpeed = settingsData['tSpeed']
+except:
+    textSpeed = 0
 
 def main():
     printDelay('Welcome to the Fallout Tabletop Roleplaying Game Character Creator!')
