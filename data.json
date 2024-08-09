@@ -791,9 +791,386 @@
     },
     "equipment": {
         "ammo": {
-
+            ".38": {
+                "quantity": [10, 5],
+                "weight": 0,
+                "cost": 1,
+                "rarity": 0,
+                "description": "Small-caliber pistol ammunition designed for double-action revolvers before the Great War. Abundant enough that it is the ammunition of choice for most makeshift firearms, and several more powerful weapons can be modified to accept a .38 cartridge, sacrificing stopping power for availability of ammunition."
+            },
+            "10mm": {
+                "quantity": "8 + 4CD",
+                "weight": 0,
+                "cost": 2,
+                "rarity": 0,
+                "description": ""
+            },
+            ".308": {
+                "quantity": "6 + 3CD",
+                "weight": 0,
+                "cost": 3,
+                "rarity": 1,
+                "description": 
+            },
+            "Flare": {
+                "quantity": "2 + 1CD",
+                "weight": 0,
+                "cost": ,
+                "rarity": ,
+                "description": 
+            },
+            "Shotgun Shell": {
+                "quantity": ,
+                "weight": 0,
+                "cost": ,
+                "rarity": ,
+                "description": 
+            },
+            ".45": {
+                "quantity": ,
+                "weight": 0,
+                "cost": ,
+                "rarity": ,
+                "description": 
+            },
+            "Flamer Fuel": {
+                "quantity": ,
+                "weight": 0,
+                "cost": ,
+                "rarity": ,
+                "description": 
+            },
+            "Fusion Cell": {
+                "quantity": ,
+                "weight": 0,
+                "cost": ,
+                "rarity": ,
+                "description": 
+            },
+            "Gamma Round": {
+                "quantity": ,
+                "weight": 0,
+                "cost": ,
+                "rarity": ,
+                "description": 
+            },
+            "Railway Spike": {
+                "quantity": ,
+                "weight": 0,
+                "cost": ,
+                "rarity": ,
+                "description": 
+            },
+            "Syringer Ammo": {
+                "quantity": "will have nested table for dif types",
+                "weight": 0,
+                "cost": ,
+                "rarity": ,
+                "description": 
+            },
+            ".44 Magnum": {
+                "quantity": ,
+                "weight": 0,
+                "cost": ,
+                "rarity": ,
+                "description": 
+            },
+            ".50": {
+                "quantity": ,
+                "weight": 0,
+                "cost": ,
+                "rarity": ,
+                "description": 
+            },
+            "5.56mm": {
+                "quantity": ,
+                "weight": 0,
+                "cost": ,
+                "rarity": ,
+                "description": 
+            },
+            "5mm": {
+                "quantity": ,
+                "weight": 0,
+                "cost": ,
+                "rarity": ,
+                "description": 
+            },
+            "Fusion Core": {
+                "quantity": "1",
+                "weight": "4",
+                "cost": ,
+                "rarity": ,
+                "description": 
+            },
+            "Missile": {
+                "quantity": ,
+                "weight": "7",
+                "cost": ,
+                "rarity": ,
+                "description": 
+            },
+            "Plasma Cartridge": {
+                "quantity": ,
+                "weight": 0,
+                "cost": ,
+                "rarity": ,
+                "description": 
+            },
+            "2mm EC": {
+                "quantity": ,
+                "weight": 0,
+                "cost": ,
+                "rarity": ,
+                "description": 
+            },
+            "Mini-Nuke": {
+                "quantity": ,
+                "weight": "12",
+                "cost": ,
+                "rarity": ,
+                "description": 
+            }
         },
         "smallGuns": {
+            ".44 Pistol": {
+                "damage": 6,
+                "effects": [
+                    "Vicious"
+                ],
+                "damageType": "Physical",
+                "fireRate": 1,
+                "range": "C",
+                "qualities": [
+                    "Close Quarters"
+                ],
+                "weight": 4,
+                "cost": 99,
+                "rarity": 2,
+                "mods": {
+                    "receiver": [
+                        "either do all lists but empty invalid ones or just valid ones"
+                    ],
+                    "barrel": [
+
+                    ],
+                    "grip": [
+
+                    ],
+                    "sights": [
+
+                    ]
+                }
+            },
+            "10mm Pistol": {
+                "damage": 4,
+                "effects": [],
+                "damageType": "Physical",
+                "fireRate": 2,
+                "range": "C",
+                "qualities": [
+                    "Close Quarters",
+                    "Reliable"
+                ],
+                "weight": 4,
+                "cost": 50,
+                "rarity": 1
+            },
+            "Flare Gun": {
+                "damage": ,
+                "effects": [
+                    ""
+                ],
+                "damageType": "Physical",
+                "fireRate": ,
+                "range": "",
+                "qualities": [
+                    ""
+                ],
+                "weight": ,
+                "cost": ,
+                "rarity": 
+            },
+            "Assault Rifle": {
+                "damage": ,
+                "effects": [
+                    ""
+                ],
+                "damageType": "Physical",
+                "fireRate": ,
+                "range": "",
+                "qualities": [
+                    ""
+                ],
+                "weight": ,
+                "cost": ,
+                "rarity": 
+            },
+            "Combat Rifle": {
+                "damage": ,
+                "effects": [
+                    ""
+                ],
+                "damageType": "Physical",
+                "fireRate": ,
+                "range": "",
+                "qualities": [
+                    ""
+                ],
+                "weight": ,
+                "cost": ,
+                "rarity": 
+            },
+            "Gauss Rifle": {
+                "damage": ,
+                "effects": [
+                    ""
+                ],
+                "damageType": "Physical",
+                "fireRate": ,
+                "range": "",
+                "qualities": [
+                    ""
+                ],
+                "weight": ,
+                "cost": ,
+                "rarity": 
+            },
+            "Hunting Rifle": {
+                "damage": ,
+                "effects": [
+                    ""
+                ],
+                "damageType": "Physical",
+                "fireRate": ,
+                "range": "",
+                "qualities": [
+                    ""
+                ],
+                "weight": ,
+                "cost": ,
+                "rarity": 
+            },
+            "Submachine Gun": {
+                "damage": ,
+                "effects": [
+                    ""
+                ],
+                "damageType": "Physical",
+                "fireRate": ,
+                "range": "",
+                "qualities": [
+                    ""
+                ],
+                "weight": ,
+                "cost": ,
+                "rarity": 
+            },
+            "Combat Shotgun": {
+                "damage": ,
+                "effects": [
+                    ""
+                ],
+                "damageType": "Physical",
+                "fireRate": ,
+                "range": "",
+                "qualities": [
+                    ""
+                ],
+                "weight": ,
+                "cost": ,
+                "rarity": 
+            },
+            "Double-Barrel Shotgun": {
+                "damage": ,
+                "effects": [
+                    ""
+                ],
+                "damageType": "Physical",
+                "fireRate": ,
+                "range": "",
+                "qualities": [
+                    ""
+                ],
+                "weight": ,
+                "cost": ,
+                "rarity": 
+            },
+            "Pipe Bolt-Action": {
+                "damage": ,
+                "effects": [
+                    ""
+                ],
+                "damageType": "Physical",
+                "fireRate": ,
+                "range": "",
+                "qualities": [
+                    ""
+                ],
+                "weight": ,
+                "cost": ,
+                "rarity": 
+            },
+            "Pipe Gun": {
+                "damage": ,
+                "effects": [
+                    ""
+                ],
+                "damageType": "Physical",
+                "fireRate": ,
+                "range": "",
+                "qualities": [
+                    ""
+                ],
+                "weight": ,
+                "cost": ,
+                "rarity": 
+            },
+            "Pipe Revolver": {
+                "damage": ,
+                "effects": [
+                    ""
+                ],
+                "damageType": "Physical",
+                "fireRate": ,
+                "range": "",
+                "qualities": [
+                    ""
+                ],
+                "weight": ,
+                "cost": ,
+                "rarity": 
+            },
+            "Railway Rifle": {
+                "damage": ,
+                "effects": [
+                    ""
+                ],
+                "damageType": "Physical",
+                "fireRate": ,
+                "range": "",
+                "qualities": [
+                    ""
+                ],
+                "weight": ,
+                "cost": ,
+                "rarity": 
+            },
+            "Syringer": {
+                "damage": ,
+                "effects": [
+                    ""
+                ],
+                "damageType": "Physical",
+                "fireRate": ,
+                "range": "",
+                "qualities": [
+                    ""
+                ],
+                "weight": ,
+                "cost": ,
+                "rarity": 
+            },
             "mods": {
 
             }
