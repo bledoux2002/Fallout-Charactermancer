@@ -803,14 +803,14 @@
                 "weight": 0,
                 "cost": 2,
                 "rarity": 0,
-                "description": ""
+                "description": "One of the most common types of pistol round found in the wastelands, manufactured in vast quantities before the Great War to accompany the large numbers of 10mm pistols they were producing as sidearms for soldiers, and as personal defense weapons for civilians."
             },
             ".308": {
                 "quantity": "6 + 3CD",
                 "weight": 0,
                 "cost": 3,
                 "rarity": 1,
-                "description": 
+                "description":  "A high-powered rifle round normally used in hunting rifles and some bolt-action pipe rifles. They’re a com- mon enough sight in the wastelands that a weapon using .308 rounds is unlikely to run out of ammuni- tion too often."
             },
             "Flare": {
                 "quantity": "2 + 1CD",
@@ -934,6 +934,7 @@
         },
         "smallGuns": {
             ".44 Pistol": {
+                "ammo": ".44 Magnum",
                 "damage": 6,
                 "effects": [
                     "Vicious"
@@ -949,7 +950,7 @@
                 "rarity": 2,
                 "mods": {
                     "receiver": [
-                        "either do all lists but empty invalid ones or just valid ones"
+                        "Omit empty lists? probably"
                     ],
                     "barrel": [
 
@@ -963,6 +964,7 @@
                 }
             },
             "10mm Pistol": {
+                "ammo": "10mm",
                 "damage": 4,
                 "effects": [],
                 "damageType": "Physical",
@@ -974,7 +976,24 @@
                 ],
                 "weight": 4,
                 "cost": 50,
-                "rarity": 1
+                "rarity": 1,
+                "mods": {
+                    "receiver": [
+                        "Calibrated", "Hardened", "Automatic", "Hair Trigger", "Powerful", "Advanced"
+                    ],
+                    "barrel": [
+                        "Long Barrel", "Ported Barrel"
+                    ],
+                    "grip": [
+                        "Comfort Grip", "Sharpshooter's Grip"
+                    ],
+                    "sights": [
+                        "Reflex Sight", "Recon Scope"
+                    ],
+                    "Muzzle": [
+                        "Compensator", "Suppressor"
+                    ]
+                }
             },
             "Flare Gun": {
                 "damage": ,
