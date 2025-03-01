@@ -9,8 +9,9 @@ class Character:
         self.name = name
         self.level = 1
         self.ap = 0
-        self.xp = 0
-        self.health = 0
+        self.xp = 0         # Enter number into field, set calls xp_gain(). If level up, pop up window asking if user wants to level
+        self.hp = 0
+        self.lp = 0
         self.isRobot = False
         self.isNPC = False
         self.origin = None
@@ -73,7 +74,9 @@ class Character:
             "defense": 0,
             "initiative": 0,
             "maxHealth": 0,
-            "meleeBonus": 0
+            "meleeBonus": 0,
+            "maxLuck": 0,
+            "maxAP": 6
         }
         self.inventory = {
             "currency": {
@@ -102,6 +105,8 @@ class Character:
             }
         }
 
+    def set_origin(self)
+
     def update_special(self, attribute, value):
         """Update a SPECIAL attribute with a new value, and any derived statistics.
 
@@ -128,7 +133,7 @@ class Character:
                 case "END":
                     self.stats["maxHealth"] += value - self.attributes[attribute]
                     if value > self.attributes[attribute]: # if increasing max health, increase current health by same amt
-                        self.health += value - self.attributes[attribute]
+                        self.hp += value - self.attributes[attribute]
                 case "AGI":
                     self.stats["initiative"] += value - self.attributes[attribute]
                     if value < 9:
@@ -138,7 +143,8 @@ class Character:
                 case "LCK":
                     self.stats["maxHealth"] += value - self.attributes[attribute]
                     if value > self.attributes[attribute]: # if increasing max health, increase current health by same amt
-                        self.health += value - self.attributes[attribute]
+                        self.hp += value - self.attributes[attribute]
+                    self.stats["maxLuck"]
             self.attributes[attribute] = value
 
     def xp_gain(self, gained):
@@ -154,13 +160,13 @@ class Character:
         while self.xp >= (self.level + 1) * (self.level / 2) * 100: # Core Rulebook, page 49
             self.level += 1
             self.stats["maxHealth"] += 1
-            self.health += 1
+            self.hp += 1
             # INCREASE CHOSEN SKILL BY 1
             # CHOOSE NEW/UPGRADABLE PERK
             return 1
         return 0
 
-    def eligible_perks(self):
+    def eligible_perks(self, perks):
         """List of all perks available to character at creation or when leveling up.
 
         Returns:
@@ -174,6 +180,16 @@ class Character:
                 upgradable[perk] = self.perks[perk]
         
         perks = {}
+
+        """
+        Move file opening to editor.py
+        When choosing a new perk, list all perks (expandable descriptions,
+        perk "card" is a button, with a select button only clickable if a
+        perk is chosen, ignorable popup window if ineligible for homebrew
+        purposes, with settings allowing you to turn different warnings
+        back on), have filters, including separate "upgradable" and
+        "eligible" filter.
+        """
         try:
             with open("data.json", "r", encoding="utf-8") as dataFile:
                 perks = json.load(dataFile)["perks"]
@@ -208,3 +224,18 @@ class Character:
                     pass
         
         return reqsMet
+    
+    def update_ap(self, amt):
+        """Change AP up to max, and increase max if Inspirational perk taken
+        Not sure how to deal with increasing max if someone else in party takes perk,
+        need to manually increase instead. Will wait until GUI finished since that migth affect approach.
+        Maybe special context menu in menubar for this and similar situations?
+        Buttons maybe deactivate when max/min, but if you manually enter higher number you can increase the max AP to that new value
+
+        Args:
+            amt (int): Total value to change current (and possibly max) AP totr, changeable from entry or plus/minus buttons (1 each)
+
+        Returns:
+            code (int): Success of operation, different numbners can mean different outcomes (0 succeeded, 1 failed (maxed out), 2 failed (too low))
+        """
+        self.
