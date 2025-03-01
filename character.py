@@ -225,17 +225,17 @@ class Character:
         
         return reqsMet
     
-    def update_ap(self, amt):
-        """Change AP up to max, and increase max if Inspirational perk taken
-        Not sure how to deal with increasing max if someone else in party takes perk,
-        need to manually increase instead. Will wait until GUI finished since that migth affect approach.
-        Maybe special context menu in menubar for this and similar situations?
-        Buttons maybe deactivate when max/min, but if you manually enter higher number you can increase the max AP to that new value
+    # def update_ap(self, amt):
+    #     """Change AP up to max, and increase max if Inspirational perk taken
+    #     Not sure how to deal with increasing max if someone else in party takes perk,
+    #     need to manually increase instead. Will wait until GUI finished since that migth affect approach.
+    #     Maybe special context menu in menubar for this and similar situations?
+    #     Buttons maybe deactivate when max/min, but if you manually enter higher number you can increase the max AP to that new value
 
-        Args:
-            amt (int): Total value to change current (and possibly max) AP totr, changeable from entry or plus/minus buttons (1 each)
+    #     Args:
+    #         amt (int): Total value to change current (and possibly max) AP totr, changeable from entry or plus/minus buttons (1 each)
 
-        Returns:
-            code (int): Success of operation, different numbners can mean different outcomes (0 succeeded, 1 failed (maxed out), 2 failed (too low))
-        """
-        self.
+    #     Returns:
+    #         code (int): Success of operation, different numbners can mean different outcomes (0 succeeded, 1 failed (maxed out), 2 failed (too low))
+    #     """
+    #     self.
