@@ -7,19 +7,23 @@ import json
 class Creator:
     def __init__(self, character):
         self.character = character
+        self.data = {}
+        with open("data.json", "r", encoding="utf-8") as dataFile:
+            self.data = json.load(dataFile)
 
     def origin(self):
         pass
 
     def special(self):
-        pass
+        for attribute in self.character.attributes:
+            self.character.update_special(attribute, 5)
 
-    def skills(self):
-        self.__tag_skills()
-        pass
+    def skills(self, tagged, ranks):
+        for skill in tagged:
+            self.character.tag_skill(skill)
 
-    def __tag_skills(self):
-        pass
+        for skill, rank in ranks:
+            self.character.skills[skill] = rank
 
     def perk(self):
         pass

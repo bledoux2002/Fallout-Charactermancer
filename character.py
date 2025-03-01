@@ -1,6 +1,6 @@
 # Character file class for the Fallout 2d20 Tabletop Roleplaying system by Modiphius Entertainment
 # Created by Benjamin Ledoux using the Core Rulebook February 2023 edition.
-# First created 2/26/2023 2200, last editted 2/27/2025 0039
+# First created 2/26/2023 2200, last editted 2/28/2025 2230
 
 import json
 
@@ -147,6 +147,12 @@ class Character:
                     self.stats["maxLuck"]
             self.attributes[attribute] = value
 
+    def tag_skill(self, skill):
+        self.skills[skill]["rank"] += 2
+        if self.skills[skill]["rank"] > 6:
+            self.skills[skill]["rank"] = 6
+        self.skills[skill]["isTag"] = True
+
     def xp_gain(self, gained):
         """Character has gained experience, add to total and handle possible level up.
 
@@ -224,7 +230,16 @@ class Character:
                     pass
         
         return reqsMet
-    
+
+    def add_item(self, item):
+        """Add equipment to inventory from data.json
+
+        Args:
+            item (dict): The item being added
+        """
+        # Need to figure out which tab in inventory to add item to, maybe item_field (currency, gear, mods) and item_type (caps, weapon, robot) args?
+
+
     # def update_ap(self, amt):
     #     """Change AP up to max, and increase max if Inspirational perk taken
     #     Not sure how to deal with increasing max if someone else in party takes perk,
