@@ -105,8 +105,6 @@ class Character:
             }
         }
 
-    def set_origin(self)
-
     def update_special(self, attribute, value):
         """Update a SPECIAL attribute with a new value, and any derived statistics.
 
