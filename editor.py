@@ -6,7 +6,7 @@ class Charactermancer:
     
     def __init__(self, root):
         self.root = root
-        self.recent_files = ['file1', 'file2', 'file3']
+        self.recent_files = []
         
         self.root.title('Fallout 2d20 Charactermancer')
         
@@ -14,10 +14,89 @@ class Charactermancer:
 
         self.__setupMenu()
 
-        # mainframe = ttk.Frame(self.root, padding="3 3 12 12")
-        # mainframe.grid(column=0, row=0, sticky=(N, W, E, S))
-        # self.root.columnconfigure(0, weight=1)
-        # self.root.rowconfigure(0, weight=1)
+        mainframe = ttk.Frame(self.root, padding="12 12 12 12")
+        mainframe.grid(column=0, row=0, sticky=(N, W, E, S))
+        self.root.columnconfigure(0, weight=1)
+        self.root.rowconfigure(0, weight=1)
+        
+        top = ttk.Frame(mainframe, padding="12 12 12 12", borderwidth=2, relief="raised")
+        top.grid(column=0, row=0, sticky=(N, W, E))
+        nameEntry = ttk.Entry(top)
+        nameEntry.insert(0, "Name")
+        nameEntry.grid(column=0, row=0, rowspan=2, sticky=(N, W))
+        originLabel = ttk.Label(top, text="Origin: ")
+        originLabel.grid(column=0, row=2, sticky=(W))
+        apLabel = ttk.Label(top, text="Action Points")
+        apLabel.grid(column=1, row=2)
+        apEntry = ttk.Entry(top)
+        apEntry.insert(0, 0)
+        apEntry.grid(column=2, row=2)
+        xpLabel = ttk.Label(top, text="Experience Points")
+        xpLabel.grid(column=3, row=2)
+        xpEntry = ttk.Entry(top)
+        xpEntry.insert(0, 0)
+        xpEntry.grid(column=4, row=2)
+        
+        # SPECIAL
+        special = ttk.Frame(top, padding="12 12 12 12", borderwidth=2)
+        special.grid(column=0, row=3, columnspan=9, rowspan=2)
+        
+        sEnt = ttk.Entry(special)
+        sEnt.insert(0, 0)
+        sEnt.grid(column=0, row=0, sticky=(N))
+        sLbl = ttk.Label(special, text="Strength")
+        sLbl.grid(column=0, row=1, sticky=(S))
+        pEnt = ttk.Entry(special)
+        pEnt.insert(0, 0)
+        pEnt.grid(column=1, row=0, sticky=(N))
+        pLbl = ttk.Label(special, text="Perception")
+        pLbl.grid(column=1, row=1, sticky=(S))
+        eEnt = ttk.Entry(special)
+        eEnt.insert(0, 0)
+        eEnt.grid(column=2, row=0, sticky=(N))
+        eLbl = ttk.Label(special, text="Endurance")
+        eLbl.grid(column=2, row=1, sticky=(S))
+        cEnt = ttk.Entry(special)
+        cEnt.insert(0, 0)
+        cEnt.grid(column=3, row=0, sticky=(N))
+        cLbl = ttk.Label(special, text="Charisma")
+        cLbl.grid(column=3, row=1, sticky=(S))
+        iEnt = ttk.Entry(special)
+        iEnt.insert(0, 0)
+        iEnt.grid(column=4, row=0, sticky=(N))
+        iLbl = ttk.Label(special, text="Intelligence")
+        iLbl.grid(column=4, row=1, sticky=(S))
+        aEnt = ttk.Entry(special)
+        aEnt.insert(0, 0)
+        aEnt.grid(column=5, row=0, sticky=(N))
+        aLbl = ttk.Label(special, text="Agility")
+        aLbl.grid(column=5, row=1, sticky=(S))
+        lEnt = ttk.Entry(special)
+        lEnt.insert(0, 0)
+        lEnt.grid(column=6, row=0, sticky=(N))
+        lLbl = ttk.Label(special, text="Luck")
+        lLbl.grid(column=6, row=1, sticky=(S))
+        
+        # Luck Points
+        luckPoints = ttk.Frame(special, padding="3 0 3 0")
+        luckPoints.grid(column=7, row=0, rowspan=2, sticky=(E))
+        lpEnt = ttk.Entry(luckPoints)
+        lpEnt.insert(0, 0)
+        lpEnt.grid(column=0, row=0, sticky=(N, W))
+        lpMax =ttk.Label(luckPoints, text=" / 0")
+        lpMax.grid(column=1, row=0, sticky=(N, E))
+        lpLbl = ttk.Label(luckPoints, text="Luck Points")
+        lpLbl.grid(column=0, row=1, columnspan=2, sticky=(W, E, S))
+        
+        core = ttk.Frame(mainframe, padding="12 12 12 12")
+        core.grid(column=0, row=1, sticky=(W, E, S))
+        
+        # perks = ttk.Frame(mainframe, padding="3 3 12 12")
+        # perks.grid(column=0, row=1, sticky=(W, E, S))
+        
+        # gear = ttk.Frame(mainframe, padding="3 3 12 12")
+        # gear.grid(column=0, row=1, sticky=(W, E, S))
+        
 
     def __setupMenu(self):
         # Menubar
