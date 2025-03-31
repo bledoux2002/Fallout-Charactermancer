@@ -5,7 +5,7 @@
 import json
 
 class Character:
-    def __init__(self, name="Wastelander"):
+    def __init__(self, name: str = "Wastelander"):
         self.name = name
         self.level = 1
         self.ap = 0
@@ -14,8 +14,9 @@ class Character:
         self.lp = 0
         self.isRobot = False
         self.isNPC = False
-        self.origin = None
-        self.traits = {}
+        self.origin = "NONE"
+        self.trait = {
+        }
         self.equipmentPack = {}
         self.attributes = {
             "STR": 0,
@@ -45,10 +46,10 @@ class Character:
             "Throwing": {"attribute": "AGI"},
             "Unarmed": {"attribute": "STR"}
         }
-        for skill in self.skills:
+        for _, skill in self.skills.items():
             skill["rank"] = 0
             skill["isTag"] = False
-        self.perks = { # only difference from data.json is rank is single int instead of array
+        # only difference from data.json is rank is single int instead of array
         """
         name: {
             rank: int,
@@ -62,6 +63,7 @@ class Character:
             description: str
         }
         """
+        self.perks = {
         }
         self.stats = {
             "carryWeight": 150, # base carry weight
@@ -105,6 +107,14 @@ class Character:
             }
         }
 
+    def info(self):
+        print(f"{self.name}, level {self.level} {self.origin} ({self.xp} XP)")
+        for att, val in self.attributes.items():
+            print(f"{att}: {val}, ", end="")
+        print(f"\n{self.hp} / " + str(self.stats["maxHealth"]) + " HP, ", end="")
+        print(f"{self.ap} / " + str(self.stats["maxAP"]) + " AP, ", end="")
+        print(f"{self.lp} / " + str(self.stats["maxLuck"]) + " Luck Points")
+
     def update_special(self, attribute, value):
         """Update a SPECIAL attribute with a new value, and any derived statistics.
 
@@ -113,10 +123,11 @@ class Character:
             value (int): New value of attribute, can be less.
         """
         if (self.attributes[attribute] != value):
+            dif = value - self.attributes[attribute]
             match (attribute):
                 case "STR":
                     # Change by STR difference in new value, allows for homebrew modification of base carry weight
-                    self.stats["carryWeight"] += (value - self.attributes[attribute]) * 10
+                    self.stats["carryWeight"] += dif * 10
                     if value > 10:
                         self.stats["meleeBonus"] = 3
                     elif value > 8:
@@ -125,24 +136,23 @@ class Character:
                         self.stats["meleeBonus"] = 1
                     else:
                         self.stats["meleeBonus"] = 0
-                        
                 case "PER":
-                    self.stats["initiative"] += value - self.attributes[attribute]
+                    self.stats["initiative"] += dif
                 case "END":
-                    self.stats["maxHealth"] += value - self.attributes[attribute]
+                    self.stats["maxHealth"] += dif
                     if value > self.attributes[attribute]: # if increasing max health, increase current health by same amt
-                        self.hp += value - self.attributes[attribute]
+                        self.hp += dif
                 case "AGI":
-                    self.stats["initiative"] += value - self.attributes[attribute]
+                    self.stats["initiative"] += dif
                     if value < 9:
                         self.stats["defense"] = 1
                     else:
                         self.stats["defense"] = 2
                 case "LCK":
-                    self.stats["maxHealth"] += value - self.attributes[attribute]
+                    self.stats["maxHealth"] += dif
                     if value > self.attributes[attribute]: # if increasing max health, increase current health by same amt
-                        self.hp += value - self.attributes[attribute]
-                    self.stats["maxLuck"]
+                        self.hp += dif
+                    self.stats["maxLuck"] += dif
             self.attributes[attribute] = value
 
     def tag_skill(self, skill):
@@ -164,6 +174,7 @@ class Character:
         while self.xp >= (self.level + 1) * (self.level / 2) * 100: # Core Rulebook, page 49
             self.level += 1
             self.stats["maxHealth"] += 1
+            self.hpMax += 1
             self.hp += 1
             # INCREASE CHOSEN SKILL BY 1
             # CHOOSE NEW/UPGRADABLE PERK
@@ -179,7 +190,7 @@ class Character:
         upgradable = {}
         new = {}
 
-        for perk in self.perks:
+        for _, perk in self.perks.items():
             if self.__check_perk_requirements(perk):
                 upgradable[perk] = self.perks[perk]
         
@@ -218,7 +229,7 @@ class Character:
             bool: Whether the character fulfills the requirements of the perk.
         """
         reqsMet = False
-        for req in perk["requirements"]:
+        for req, _ in perk["requirements"].items():
             match (req):
                 case "levels":
                     pass

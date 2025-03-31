@@ -3,12 +3,13 @@
 # First created 2/28/2023 2230, last editted 2/26/2025 2240
 
 import json
+from character import Character
 
 class Creator:
-    def __init__(self, character):
+    def __init__(self, character: Character):
         self.character = character
         self.data = {}
-        with open("data.json", "r", encoding="utf-8") as dataFile:
+        with open("./data.json", "r", encoding="utf-8") as dataFile:
             self.data = json.load(dataFile)
 
     def origin(self):
