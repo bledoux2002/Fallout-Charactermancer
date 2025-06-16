@@ -42,7 +42,7 @@ class Charactermancer:
         originEntry = ttk.Entry(origin)
         originEntry.insert(0, "Origin")
         originEntry.grid(column=1, row=0)
-        ap = ttk.Frame(top, padding="0 6 0 6", borderwidth=2, rel.ief="raised")
+        ap = ttk.Frame(top, padding="0 6 0 6", borderwidth=2, relief="raised")
         ap.grid(column=1, row=2)
         apLabel = ttk.Label(ap, text="Action Points", padding="6 0 6 0")
         apLabel.grid(column=0, row=0)
