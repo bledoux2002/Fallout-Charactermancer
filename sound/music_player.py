@@ -79,19 +79,28 @@ class MusicBox:
         self.frm_player.rowconfigure(1, weight=1, minsize=50)
         self.frm_player.rowconfigure(2, weight=1, minsize=100)
         
+        
         self.title = StringVar(self.frm_player, value="Foo Bar")
         self.lbl_title = Label(self.frm_player, textvariable=self.title)
+        
         self.progress = StringVar(self.frm_player, value="0:00")
         self.lbl_progress = Label(self.frm_player, textvariable=self.progress)
         self.sld_progress = Scale(self.frm_player, orient=HORIZONTAL, from_=0.0, to=100.0)
         self.length = StringVar(self.frm_player, value="99:99")
         self.lbl_length = Label(self.frm_player, textvariable=self.length)
         
+        self.btn_prev = Button(self.frm_player, text="|<<")
+        self.btn_play = Button(self.frm_player, text=">/||")
+        self.btn_next = Button(self.frm_player, text=">>|")
+        # self.btn_shuffle = Button(self.frm_player, text="=x=")
+        
         self.lbl_title.grid(row=0, column=1, padx=5, pady=10, sticky='n')
         self.lbl_progress.grid(row=1, column=0, padx=5, pady=10, sticky='e')
         self.sld_progress.grid(row=1, column=1, padx=5, pady=10, sticky='ew')
         self.lbl_length.grid(row=1, column=2, padx=5, pady=10, sticky='w')
-        
+        self.btn_prev.grid(row=2, column=0, padx=5, pady=10, sticky='se')
+        self.btn_play.grid(row=2, column=1, padx=5, pady=10, sticky='s')
+        self.btn_next.grid(row=2, column=2, padx=5, pady=10, sticky='sw')
 
     def yt_progress_hook(self, d):
         if d['status'] == 'downloading':
