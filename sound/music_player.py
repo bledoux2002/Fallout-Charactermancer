@@ -12,14 +12,14 @@ class MusicBox:
         self.bar_progress = None  # Will be set in __setup_download
 
         self.ydl_opts = {
-            'format': 'm4a/bestaudio/best',
+            'format': 'bestaudio/best',
             'windowsFilenames': True,
             'paths': {
                 'home': './sound/files',
             },
             'postprocessors': [{
                 'key': 'FFmpegExtractAudio',
-                'preferredcodec': 'm4a',
+                'preferredcodec': 'mp3',
             }],
             'progress_hooks': [self.yt_progress_hook]
         }
@@ -148,7 +148,7 @@ class MusicBox:
         self.sld_progress.set(0)
     
     def play(self, event):
-        pass
+        video = None
     
     def next(self, event):
         self.sld_progress.set(100)
