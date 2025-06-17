@@ -27,17 +27,21 @@ class MusicBox:
         # self.path = os.path.dirname(os.path.abspath(__file__))
 
         self.root = root
-        # root.configure(bg='light sky blue')
+        root.configure(bg='medium purple')
+        root.minsize(500, 500)
         self.root.title('Adaptive Music Box')
         
         self.style_default = Style()
         self.style_name = 'Outlined.TFrame'
         self.style_default.configure(self.style_name, borderwidth=2, relief='solid')
+        # self.style_default.configure(self.style_name)
         
-        self.root.columnconfigure(0, weight=1, minsize=500)
-        self.root.rowconfigure(0, weight=1, minsize=150)
+        self.root.columnconfigure(0, weight=1)
+        self.root.rowconfigure(0, weight=0)
+        self.root.rowconfigure(1, weight=1)
         
         self.__setup_download()
+        self.__setup_player()
         
     def __setup_download(self):
         self.frm_download = Frame(self.root, style=self.style_name)
@@ -49,13 +53,13 @@ class MusicBox:
         self.frm_download.rowconfigure(1, weight=1, minsize=25)
         self.frm_download.rowconfigure(2, weight=1, minsize=25)
         
-        self.lbl_url = Label(master=self.frm_download, text='URL:')
-        self.ent_url = Entry(master=self.frm_download)
+        self.lbl_url = Label(self.frm_download, text='URL:')
+        self.ent_url = Entry(self.frm_download)
         self.ent_url.insert(0, 'https://youtu.be/FcaHJDj6KEE')
-        self.btn_url = Button(master=self.frm_download, text='Download')
+        self.btn_url = Button(self.frm_download, text='Download')
         self.bar_progress = Progressbar(master=self.frm_download, orient='horizontal')
-        self.status = StringVar(master=self.frm_download, value='Please enter a URL')
-        self.lbl_status = Label(master=self.frm_download, textvariable=self.status)
+        self.status = StringVar(self.frm_download, value='Please enter a URL')
+        self.lbl_status = Label(self.frm_download, textvariable=self.status)
         
         self.lbl_url.grid(row=0, column=0, padx=5, pady=5, sticky='w')
         self.ent_url.grid(row=0, column=1, sticky='ew')
@@ -64,6 +68,30 @@ class MusicBox:
         self.lbl_status.grid(row=2, column=1, sticky='ew')
         
         self.btn_url.bind('<Button-1>', self.download)
+
+    def __setup_player(self):
+        self.frm_player = Frame(self.root, style=self.style_name)
+        self.frm_player.grid(row=1, column=0, padx=50, pady=25, sticky='nsew')
+        self.frm_player.columnconfigure(0, weight=0, minsize=100)
+        self.frm_player.columnconfigure(1, weight=1, minsize=200)
+        self.frm_player.columnconfigure(2, weight=0, minsize=100)
+        self.frm_player.rowconfigure(0, weight=1, minsize=50)
+        self.frm_player.rowconfigure(1, weight=1, minsize=50)
+        self.frm_player.rowconfigure(2, weight=1, minsize=100)
+        
+        self.title = StringVar(self.frm_player, value="Foo Bar")
+        self.lbl_title = Label(self.frm_player, textvariable=self.title)
+        self.progress = StringVar(self.frm_player, value="0:00")
+        self.lbl_progress = Label(self.frm_player, textvariable=self.progress)
+        self.sld_progress = Scale(self.frm_player, orient=HORIZONTAL, from_=0.0, to=100.0)
+        self.length = StringVar(self.frm_player, value="99:99")
+        self.lbl_length = Label(self.frm_player, textvariable=self.length)
+        
+        self.lbl_title.grid(row=0, column=1, padx=5, pady=10, sticky='n')
+        self.lbl_progress.grid(row=1, column=0, padx=5, pady=10, sticky='e')
+        self.sld_progress.grid(row=1, column=1, padx=5, pady=10, sticky='ew')
+        self.lbl_length.grid(row=1, column=2, padx=5, pady=10, sticky='w')
+        
 
     def yt_progress_hook(self, d):
         if d['status'] == 'downloading':
