@@ -107,6 +107,10 @@ class MusicBox:
         self.btn_prev.grid(row=0, column=0, padx=5, pady=10, sticky='e')
         self.btn_play.grid(row=0, column=1, padx=5, pady=10)
         self.btn_next.grid(row=0, column=2, padx=5, pady=10, sticky='w')
+        
+        self.btn_prev.bind('<Button-1>', self.prev)
+        self.btn_play.bind('<Button-1>', self.play)
+        self.btn_next.bind('<Button-1>', self.next)
 
     def yt_progress_hook(self, d):
         if d['status'] == 'downloading':
@@ -139,6 +143,15 @@ class MusicBox:
                     self.root.after(0, self.status.set, f"Error code: {error_code}")
         except Exception as e:
             self.root.after(0, self.status.set, f'Error: {e}')
+
+    def prev(self, event):
+        self.sld_progress.set(0)
+    
+    def play(self, event):
+        pass
+    
+    def next(self, event):
+        self.sld_progress.set(100)
 
 def main():
     
