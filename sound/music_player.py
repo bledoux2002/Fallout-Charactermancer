@@ -89,18 +89,24 @@ class MusicBox:
         self.length = StringVar(self.frm_player, value="99:99")
         self.lbl_length = Label(self.frm_player, textvariable=self.length)
         
-        self.btn_prev = Button(self.frm_player, text="|<<")
-        self.btn_play = Button(self.frm_player, text=">/||")
-        self.btn_next = Button(self.frm_player, text=">>|")
+        self.frm_buttons = Frame(self.frm_player)
+        self.frm_buttons.grid(row=2, column=1, padx=25, pady=15, sticky='nesw')
+        self.frm_buttons.columnconfigure(0, weight=1)
+        self.frm_buttons.columnconfigure(1, weight=1)
+        self.frm_buttons.columnconfigure(2, weight=1)
+        self.btn_prev = Button(self.frm_buttons, text="|<<")
+        self.btn_play = Button(self.frm_buttons, text=">/||")
+        self.btn_next = Button(self.frm_buttons, text=">>|")
         # self.btn_shuffle = Button(self.frm_player, text="=x=")
         
         self.lbl_title.grid(row=0, column=1, padx=5, pady=10, sticky='n')
         self.lbl_progress.grid(row=1, column=0, padx=5, pady=10, sticky='e')
         self.sld_progress.grid(row=1, column=1, padx=5, pady=10, sticky='ew')
         self.lbl_length.grid(row=1, column=2, padx=5, pady=10, sticky='w')
-        self.btn_prev.grid(row=2, column=0, padx=5, pady=10, sticky='se')
-        self.btn_play.grid(row=2, column=1, padx=5, pady=10, sticky='s')
-        self.btn_next.grid(row=2, column=2, padx=5, pady=10, sticky='sw')
+        
+        self.btn_prev.grid(row=0, column=0, padx=5, pady=10, sticky='e')
+        self.btn_play.grid(row=0, column=1, padx=5, pady=10)
+        self.btn_next.grid(row=0, column=2, padx=5, pady=10, sticky='w')
 
     def yt_progress_hook(self, d):
         if d['status'] == 'downloading':
